@@ -1,0 +1,127 @@
+#if($Flash.delete)
+<section class="grid_12"><div class="alert succes_msg"><strong>Succes: </strong>$Flash.delete</div></section>
+#end
+<section id="container" class="container_12">
+				<!-- ======= .grid_12 - block begin ======= -->
+				<section class="grid_12">
+					<div class="box">
+						<div class="inside">
+							<table border="0" width="100%" cellpadding="0" cellspacing="0">
+                              <tr>
+                                 <td align="left" valign="middle" class="details-header" style="padding:15px;font-size:18px;">
+                                 <b>Create Custom Field</b>
+                                  </td>
+                              </tr>
+							  <tr>
+                                 <td align="left" valign="top">
+								 		<table border="0" width="100%" cellpadding="0" cellspacing="0">
+                                          <tr>
+                                             <td align="left" valign="top" width="20%">
+											 		<table border="0" width="100%" cellpadding="0" cellspacing="0">
+                                                      <tr>
+                                                         <td align="left" valign="top">
+                                        				  <ul class="tabs">
+                                                              <li><a href="#0">Text</a></li>
+                                                              <li><a href="#3" class="picklist">Pick List</a></li>
+                                                              <li><a href="#7" class="date">Date</a></li>
+                                                              <li><a href="#0" class="integer">Integer</a></li>
+                                                              <li><a href="#15" class="checkbox">Checkbox</a></li>
+															  <li><a href="#0" class="perc">Percent</a></li>
+                                                              <li><a href="#5" class="decimal">Decimal</a></li>
+															  <li><a href="#0" class="currency">Currency</a></li>
+															  <li><a href="#7" class="datetime">Datetime</a></li>
+                                                              <li><a href="#0" class="email">Email</a></li>
+															  <li><a href="#0" class="phone">Phone</a></li>
+															  <li><a href="#0" class="url">URL</a></li>
+															  <li><a href="#0" class="textarea">Textarea</a></li>
+                                                          </ul>
+                                        				  </td>
+                                                      </tr>
+                                                    </table>
+											 </td>
+											 <td align="left" valign="top" width="2%"></td>
+											 <td align="left" valign="top" width="78%">
+                                             		$Form.FormTag("%{action='saveXtraField',id='ch_form'}")
+											 		<table border="0" width="100%" cellpadding="0" cellspacing="0">
+                                                      <tr>
+                                                         <td align="left" valign="top" height="20"></td>
+                                                      </tr>
+  													  <tr>
+                                                         <td align="left" valign="top">
+														 	<div id="tab1" class="tab_content">
+                                                               <table table border="0" cellpadding="0" cellspacing="0"  width="100%">
+                                                                <tr><!-- Row 1 -->
+                                                                   <td align="left" valign="top" class="text1">
+                                                                 <table width="100%" cellpadding="0" cellspacing="0" border="0" >
+                                                                        <tr>
+                                                                          <td><b>Section:</b></td>
+                                                                          <td>
+                                                                          	<select name="sectionChange" id="Select1" class="selectbox1">
+                                                                                    <option value="InformationSection" selected="selected">Information Section</option>
+                                                                                    <option value="AddressSection">Address Section</option>
+                                                                                    <option value="DescriptionSection">Description Section</option>
+    									                                    </select>
+                                                                          </td>
+                                                                          </tr>
+                                                                           <tr>
+                                                                          <td><b>Module:</b></td>
+                                                                          <td>
+                                                                      <select name="changeList" id="changeList" class="selectbox1">
+                                                                            <option #if($currentList=="MyLead") selected #end value="DEF_LEAD">My Leads</option>
+                                                                              <option  #if($currentList=="DEF_ACCOUNT") selected #end  value="DEF_ACCOUNT">My Account</option>
+                                                                              <option #if($currentList=="DEF_CONTACT") selected #end  value="DEF_CONTACT">My Contact</option>
+                                                                              <option #if($currentList=="DEF_CAMPAIGN") selected #end  value="DEF_CAMPAIGN">My Campaign</option>
+                                                                                 <option #if($currentList=="DEF_BPT") selected #end  value="DEF_BPT">Business Partner</option>
+                                                                                  <option #if($currentList=="DEF_EMP") selected #end  value="DEF_EMP">Employee</option>
+                                                                                <!--<option  value="MyLead">My Call</option>-->
+    									                                    </select>
+                                                                          </td>
+                                                                          </tr>
+                                                                          <tr><td colspan="2" style="height:10px;"></td></tr>
+                                                                           <tr>
+                                                                          <td><b>Add Field Name:</b></td>
+                                                                          <td>
+                                                                                <input type="hidden" name="fieldtype" id="fieldtype" value="0" />
+                                                                        <input type="text" name="addfieldname" id="addfieldname" style="width:240px;" value="" />
+                                                                          </td>
+                                                                          </tr>
+                                                                           <tr><td colspan="2" style="height:10px;"></td></tr>
+                                                                            <tr id="showpiclist" class="showpiclist">
+                                                                            <td><b>Pick List Values:</b></td>
+                                                                            <td  >
+								                                           <textarea name="pickListValue" rows="3" cols="20"></textarea>
+                                                                        <br /><b>&nbsp;Example: abc#def#....</b>
+                                                                            </td></tr>
+
+                                                                            <tr><td colspan="2" style="height:10px;"></td></tr>
+                                                                             <tr><td colspan="2" align="center">
+                                                                            <!--Form footer begin-->
+										                                            <input type="reset" name="SaveButtonType" class="$ButtonStyleCancel"  onclick="javascript:fnCancel();"  value="Cancel" />&nbsp;
+										                                            <!--<input type="button" name="SaveButtonType" class="right button green"   value="Save & New" />-->
+                                                                                    <input type="button" name="SaveButtonType"  class="$ButtonStyleSave"  value="Save" />
+                                                                            </td></tr>
+                                                                  </table>
+                                                                   </td><!-- Col 1 -->
+                                                                </tr>
+                                                              </table>
+                                                     	</form>
+                                                            </div>
+														 </td>
+                                                      </tr>
+													  <tr>
+                                                         <td align="left" valign="top" height="20"></td>
+                                                      </tr>
+                                                    </table>
+											 </td>
+                                          </tr>
+                                        </table>
+								 </td>
+                              </tr>
+                            </table>
+						<div class="clear"></div>
+						</div>
+					</div>
+				</section>
+				<div class="clear"></div>
+				<!-- ======= .grid_12 - block end ======= -->		
+			</section><!-- End of #container -->

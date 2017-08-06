@@ -1,0 +1,245 @@
+#if($Flash.delete)
+<section class="grid_12"><div class="alert succes_msg"><strong>Succes: </strong>$Flash.delete</div></section>
+#end
+<section id="container" class="container_12">
+				<!-- ======= .grid_12 - block begin ======= -->
+				<section class="grid_12">
+					<div class="box">
+						<div class="inside nobg">
+							<table border="0" width="100%" cellpadding="0" cellspacing="0" class="setup-holder">
+                             #if($AddField=='Yes')
+                              <tr>
+                                 <td align="left" valign="middle" class="details-header"><b>Create Custom Field</b> </td>
+                              </tr>
+                              #end
+							  <tr>
+                                 <td align="left" valign="top" class="inside">
+                                 <table border="0" width="100%" cellpadding="0" cellspacing="0" class="inside-table-holder">
+                                 <tr>
+                                  #if($AddField=='Yes')
+                                 <td width="20%" class="leftnavcollapse">
+                                 #parse("LeftPanel/Leftpanel.vm")
+                                 </td>
+                                 #end
+                                 <td  width="80%" class="rightcontentcollaspe">
+                                  #if($AddField=='Yes')
+                                 <div class="arrow-right" id="table-collapse"></div>
+                                 #end
+							<table border="0" width="100%" cellpadding="0" cellspacing="0" style="background:#ffffff; padding:0px !important;">
+								<tr>
+                                    <td align="left" valign="top">
+									<div id="tab1" class="tab_content_two">
+                                       <table border="0" width="100%" cellpadding="0" cellspacing="0">
+							            <tr>
+								            <td align="left" valign="top">
+									            <table border="0" width="100%" cellpadding="0" cellspacing="0" class="profileheader">
+										            <tr>
+                                                     #if($AddField=='Yes')
+			                                            <td align="left" valign="top" width="20%">
+												            <table border="0" width="100%" cellpadding="0" cellspacing="0">
+													            <tr>
+                                                         <td align="left" valign="top">
+                                        				  <ul class="tabs">
+                                                              <li><a href="#0" class="text">Text</a></li>
+                                                              <li><a href="#3" class="picklist">Pick List</a></li>
+                                                              <li><a href="#7" class="date">Date</a></li>
+                                                              <li><a href="#0" class="integer">Integer</a></li>
+                                                              <li><a href="#15" class="checkbox">Checkbox</a></li>
+															  <li><a href="#0" class="perc">Percent</a></li>
+                                                              <li><a href="#5" class="decimal">Decimal</a></li>
+															  <li><a href="#0" class="currency">Currency</a></li>
+															  <li><a href="#7" class="datetime">Datetime</a></li>
+                                                              <li><a href="#0" class="email">Email</a></li>
+															  <li><a href="#0" class="phone">Phone</a></li>
+															  <li><a href="#0" class="url">URL</a></li>
+															  <li><a href="#0" class="textarea">Textarea</a></li>
+                                                          </ul>
+                                        				  </td>
+                                                      </tr>
+                                                    </table>
+											 </td>
+                                                     #end
+											 <td align="left" valign="top" width="80%">
+                                             		 $Form.FormTag("%{id='define' , class='formee'}")
+                                                     $Form.HiddenField("ModuleFields.Id")
+											 		<table border="0" width="100%" cellpadding="0" cellspacing="0">
+  													  <tr>
+                                                         <td align="left" valign="top">
+														 	<div id="Div1" class="tab_content">
+                                                               <table border="0" cellpadding="0" cellspacing="0"  width="100%">
+                                                                <tr><!-- Row 1 -->
+                                                                   <td align="left" valign="top" class="text1">
+                                                                 <table width="100%" cellpadding="0" cellspacing="0" border="0" class="profileheader">
+                                                                  #if($AddField=='Yes')                                                              
+                                                                           <tr>
+                                                                          <td class="bldtxt" align="right">Module:</td>
+                                                                          <td class="nrltext" align="left">
+                                                                           <select name="changeList" id="changeList"  onchange="javascript:ToChangeModuleSection();">
+                                                                            <option #if($currentList=="MyLead") selected #end value="DEF_LEAD">My Leads</option>
+                                                                              <option  #if($currentList=="DEF_ACCOUNT") selected #end  value="DEF_ACCOUNT">My Account</option>
+                                                                              <option #if($currentList=="DEF_CONTACT") selected #end  value="DEF_CONTACT">My Contact</option>
+                                                                              <option #if($currentList=="DEF_CAMPAIGN") selected #end  value="DEF_CAMPAIGN">My Campaign</option>
+                                                                                <option #if($currentList=="DEF_POTENTIAL") selected #end  value="DEF_POTENTIAL">Potential</option>
+                                                                                 <option #if($currentList=="DEF_CASE") selected #end  value="DEF_CASE">Cases</option>
+                                                                                    <option #if($currentList=="DEF_PRODUCT") selected #end  value="DEF_PRODUCT">Products</option>
+                                                                                    <option #if($currentList=="DEF_SOLUTION") selected #end  value="DEF_SOLUTION">Solution</option>
+                                                                                    <option #if($currentList=="DEF_VENDOR") selected #end  value="DEF_VENDOR">Vendor</option>
+                                                                                    <option #if($currentList=="DEF_PRICEBOOK") selected #end  value="DEF_PRICEBOOK">PriceBook</option>
+                                                                                    <option #if($currentList=="DEF_QUOTE") selected #end  value="DEF_QUOTE">Quotes</option>
+                                                                                    <option #if($currentList=="DEF_EMP") selected #end  value="DEF_EMP">User</option>
+                                                                               #if($WhichCompany == 'SKY')
+                                                                                    <option #if($currentList=="DEF_MBO") selected #end  value="DEF_MBO">Mbo</option>
+                                                                               #end
+
+                                                                                 <!--<option #if($currentList=="DEF_BPT") selected #end  value="DEF_BPT">Business Partner</option>
+                                                                                  <option #if($currentList=="DEF_EMP") selected #end  value="DEF_EMP">Employee</option>-->
+                                                                                <!--<option  value="MyLead">My Call</option>-->
+    									                                    </select>
+                                                                          </td>
+                                                                          </tr>
+                                                                           <tr>
+                                                                          <td class="bldtxt" align="right" width="25%">Section:</td>
+                                                                          <td class="nrltext" align="left" width="75%" id="showme">
+                                                                          
+                                                                            $FormHelper.Select("ModuleFields.modulesection.Id", $ModuleSections, "%{value='id', text='Name',  class=''}")
+                                                                          </td>
+                                                                          </tr>
+                                                                          #end
+                                                                           <tr>
+                                                                          <td class="bldtxt" align="right">Add Field Name:</td>
+                                                                          <td class="nrltext" align="left">
+                                                                                <input type="hidden" name="fieldtype" id="fieldtype" value="0" />
+                                                                                 $FormHelper.TextField("ModuleFields.Caption","%{class='required form-control input-sm' }") 
+                                                                               <!-- <input type="text" name="addfieldname" id="addfieldname" style="width:240px;" class="required" value="$!FieldName" />-->
+                                                                          </td>
+                                                                          </tr>
+                                                                           #if($AddField=='Yes')
+                                                                            <tr id="showpiclist" class="showpiclist">
+                                                                            <td class="bldtxt" align="right">Pick List Values:</td>
+                                                                            <td class="nrltext" align="left">
+								                                           <textarea name="pickListValue" rows="3" cols="20" class="required"></textarea>
+                                                                        <br /><b>&nbsp;Example: abc#def#....</b>
+                                                                            </td></tr>
+                                                                            #end
+                                                                             <tr><td class="bldtxt nobg" align="right">&nbsp;</td>
+                                                                             <input type="hidden" name="ModuleName" value="$!ModuleName" />
+                                                                             <input type="hidden" name="EditMod" value="$!EditMod" />
+
+                                                                          <td class="nrltext" align="left">
+                                                                             <input type="button" class="add-button margin9 saveallbtn" name="SaveButtonType" onclick="javascript:SaveEditAjax('$Url.For("%{controller='CreateLayout',action='saveXtraField'}")');"  value="Save" />
+                                                                            <!--<input type="button" name="SaveButtonType" class="right button green"   value="Save & New" />-->
+                                                                          <input type="button" class="add-button margin9 cancelallbtn" name="SaveButtonType" onclick="javascript:OnlyLoadPage('$Url.For("%{controller='CreateLayout',action='Define'}")');"  value="Cancel" />
+                                                                            </td></tr>
+                                                                  </table>
+                                                                   </td><!-- Col 1 -->
+                                                                </tr>
+                                                              </table>
+                                                        	</form>
+                                                            </div>
+														 </td>
+                                                      </tr>
+													  <tr>
+                                                         <td align="left" valign="top" height="20"></td>
+                                                      </tr>
+                                                    </table>
+											 </td>
+                                          </tr>
+                                        </table>
+								 </td>
+                              </tr>
+                            </table>
+                        </div>
+						</td>
+                    </tr>
+         </table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<div class="clear"></div>
+</div>
+</div>
+</section>
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+        //Default Action
+        jQuery(".tab_content").hide(); //Hide all content
+        jQuery("ul.tabs li:first").addClass("active").show(); //Activate first tab
+        jQuery(".tab_content:first").show(); //Show first tab content
+        jQuery(".showpiclist:first").hide();
+        //On Click Event
+        jQuery("ul.tabs li").click(function () {
+            jQuery("ul.tabs li").removeClass("active"); //Remove any "active" class
+            jQuery(this).addClass("active"); //Add "active" class to selected tab
+            jQuery(".tab_content:first").show(); //Hide all tab content
+            var activeTab = jQuery(this).find("a").attr("href"); //Find the rel attribute value to identify the active tab + content
+            if (activeTab == "#3") {
+                jQuery(".showpiclist:first").show();
+            } else {
+                jQuery(".showpiclist:first").hide();
+            }
+            //$(activeTab).fadeIn(); //Fade in the active content
+            var nval = activeTab.split("#");
+            document.getElementById("fieldtype").value = nval[1];
+            return false;
+        });
+
+    });
+</script>
+<script type="text/javascript">
+  function validationOFFieldCheck() {
+       if (document.getElementById("addfieldname").value == "") {
+                document.getElementById("addfieldname").focus();
+                alert("Enter Field Name");
+                return false;
+            }
+            return true;
+  }
+</script>
+<script type="text/javascript">
+  function ToChangeModuleSection() {
+   var changename = jQuery("#changeList").val();
+   new Ajax.Request('$UrlHelper.For("%{controller='CreateLayout',action='ChangeModuleSectionName'}")',
+                        {
+                            method: 'get',
+                            parameters: {ChangeName : changename},
+                              onSuccess: showResult,
+                              onFailure: showMessage
+                         });
+  }
+    function showResult(transport) {
+//        document.getElementById('showme').style.display = 'block';
+//        alert("Successfully Updated");
+ jQuery("#showme").html(transport.responseText);
+
+    }
+    function showMessage(transport) {
+    }
+    </script>
+    <script type="text/javascript">
+        jQuery(document).ready(function () {
+            ToChangeModuleSection();
+            
+
+            jQuery("#leftaccordion > li > div").click(function () {
+                if (false == jQuery(this).next().is(':visible')) {
+                    jQuery('#leftaccordion ul').slideUp(300);
+                }
+                jQuery(this).next().slideToggle(300);
+            });
+            jQuery('#leftaccordion ul:eq(1)').show();
+            jQuery("#table-collapse").click(function () {
+                jQuery(".leftnavcollapse").toggle();
+                if (jQuery(this).hasClass("arrow-right") == true) {
+                    jQuery(this).removeClass("arrow-right");
+                    jQuery(this).addClass("arrow-left");
+                } else {
+                    jQuery(this).removeClass("arrow-left");
+                    jQuery(this).addClass("arrow-right");
+                }
+            });
+        });	
+    </script>
+</section>

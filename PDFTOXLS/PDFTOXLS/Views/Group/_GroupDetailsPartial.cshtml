@@ -1,0 +1,92 @@
+@{
+    var grid = Html.DevExpress().GridView(settings =>
+    {
+        settings.Name = "Group List";
+        settings.CallbackRouteValues = new { Controller = "Group", Action = "GroupDetailsPartial" };
+        
+        //settings.SettingsEditing.AddNewRowRouteValues = new { Controller = "Group", Action = "AddTicket" };
+        settings.SettingsEditing.UpdateRowRouteValues = new { Controller = "Group", Action = "GroupDetailsPartialUpdate" };
+        settings.SettingsEditing.DeleteRowRouteValues = new { Controller = "Group", Action = "GroupDetailsPartialDelete" };
+        settings.SettingsEditing.Mode = GridViewEditingMode.EditFormAndDisplayRow;
+        settings.SettingsBehavior.ConfirmDelete = true;
+
+        settings.CommandColumn.Visible = false;
+        settings.CommandColumn.ShowNewButton = false;
+        settings.CommandColumn.ShowDeleteButton = false;
+        settings.CommandColumn.ShowEditButton = false;
+        settings.Settings.ShowHeaderFilterButton = true;
+
+        settings.Settings.HorizontalScrollBarMode = ScrollBarMode.Auto;
+        settings.Styles.Row.Cursor = "pointer";
+        settings.Width = System.Web.UI.WebControls.Unit.Percentage(100);
+        
+        
+        settings.KeyFieldName = "Id";
+        settings.Columns.Add(column =>
+        {
+            column.Caption = "Action";
+            column.Width = System.Web.UI.WebControls.Unit.Percentage(10);
+            column.SetDataItemTemplateContent(c =>
+            {
+                ViewContext.Writer.Write(
+                    Html.ActionLink("Edit", "Modify", new { Id = DataBinder.Eval(c.DataItem, "Id")}) + "&nbsp;" +
+                    Html.ActionLink("Delete", "Delete", new { Id = DataBinder.Eval(c.DataItem, "Id") },
+                        new { onclick = "return confirm('Do you really want to delete this record?')" })
+                );
+            });
+
+            column.Settings.AllowDragDrop = DefaultBoolean.False;
+            column.Settings.AllowSort = DefaultBoolean.False;
+            //column.Width = 20;
+        });
+        settings.Columns.Add(column =>
+        {
+            column.Width = System.Web.UI.WebControls.Unit.Percentage(25);
+            column.FieldName = "GroupTitle";
+            column.Caption = "Group";
+            column.Settings.HeaderFilterMode = HeaderFilterMode.CheckedList;
+        });
+
+        settings.Columns.Add(column =>
+        {
+            column.Width = System.Web.UI.WebControls.Unit.Percentage(35);
+            column.FieldName = "Description";
+            column.Caption = "Description";
+            column.Settings.HeaderFilterMode = HeaderFilterMode.CheckedList;
+        });
+        settings.Columns.Add(column =>
+        {
+            column.Width = System.Web.UI.WebControls.Unit.Percentage(30);
+            column.FieldName = "PrimaryConsultant";
+            column.Caption = "PrimaryConsultant";
+            column.Settings.HeaderFilterMode = HeaderFilterMode.CheckedList;
+            column.Visible = false;
+        });
+        settings.Columns.Add(column =>
+        {
+            column.Width = System.Web.UI.WebControls.Unit.Percentage(30);
+            column.FieldName = "USER_FNAME";
+            column.Caption = "Consultant Name";
+            column.Settings.HeaderFilterMode = HeaderFilterMode.CheckedList;
+        });
+
+        settings.SettingsPager.FirstPageButton.Visible = true;
+        settings.SettingsPager.LastPageButton.Visible = true;
+        settings.SettingsPager.PageSizeItemSettings.Visible = true;
+        settings.SettingsPager.PageSizeItemSettings.Items = new string[] { "30", "50", "100" };
+        settings.SettingsPager.PageSize = 30;
+
+        settings.SettingsPager.Visible = true;
+        settings.Settings.ShowGroupPanel = true;
+        settings.Settings.ShowFilterRow = true;
+        settings.SettingsBehavior.AllowSelectByRowClick = true;
+
+    });
+    if (ViewData["EditError"] != null)
+    {
+        grid.SetEditErrorText((string)ViewData["EditError"]);
+        
+        
+    }
+}
+@grid.Bind(Model).GetHtml()

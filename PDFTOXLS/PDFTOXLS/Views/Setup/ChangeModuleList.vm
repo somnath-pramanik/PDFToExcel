@@ -1,0 +1,62 @@
+#foreach($ModuleSection in $ModuleSections)
+            #if($ModuleSection.Name!="Network Details")
+                                                                                
+<table width="100%" cellpadding="0" cellspacing="0" border="0"  id="gallery2" class="gallery2">
+    <tr><td class="title">
+    <span class="icon16_sprite i_network_monitor"></span><p>$ModuleSection.Name</p>
+    </td></tr>
+        <tr>
+        <td  id="Td1" class="gallery2">
+	<ul id="sortable_$ModuleSection.Id" class="gallery2">
+        <input type="hidden" name="sortlist[]" id="sortlist_$ModuleSection.Id">
+	<!-- Gallery Items [start] -->
+    #set($k=0)
+        #foreach($ModuleField in $ModuleFields)
+                                                                                      
+            <script language="javascript" type="text/javascript">
+                jQuery(function () {
+
+                    jQuery("#sortable_$ModuleSection.Id").sortable({
+                        placeholder: "ui-state-highlight",
+                        update: function () {
+                            var order = jQuery(this).sortable("toArray");
+                            jQuery("#sortlist_$ModuleSection.Id").val(order);
+                        }
+                    });
+
+                    jQuery("ul, li").disableSelection();
+                });
+                </script>
+                                                                                           
+            #if ($ModuleField.modulesection == $ModuleSection)
+		<li  id="sec1_$ModuleSection.Id $ModuleField.Id" style="background:#if( $ModuleField.isFirstDefaultValue =='False') url('$siteRoot/Content/images/draganddropbg.png') no-repeat #f3faff #else  url('$siteRoot/Content/images/draganddropbglock.png') no-repeat 6px 8px #f3faff #end ;text-align:left; vertical-align:middle;color:#if( $ModuleField.IsMandatory =='False') #000000 #else #ff0000 #end;">
+            <div class="ajaxselectpicklist left" style="margin-top:0px;">
+            <input type="checkbox" class="tip-left" title="Mandatory Field" #if( $ModuleField.IsMandatory == 'True') checked="checked" #end  #if($ModuleField.isFirstDefaultValue =='True') disabled="disabled" #end name="ismandatory[]" onchange="javascript:updateMandFieldApps();"   value="" />
+                                                                                       
+            <span> $ModuleField.Caption  #if($ModuleField.IsMandatory =='True' )<em class="formee-req">*</em> #end</span>
+                                                                                       
+            <span><a href="#CreateLayout=Define"  onclick="javascript:EditField('$ModuleField.Id','$ModuleObjName');" title="Edit $!ModuleField.Caption Field"  rel="fullwidthboard"><img src="$siteRoot/Content/images/edit.png" alt="Edit"></a><br class="clear" /></span>
+                                                                                       
+                </div>
+            <div class="right">
+
+            <input type="checkbox" title="Show in Listng" class="tip-left" value="" #if( $ModuleField.isShowingListingPage == 'True') checked="checked" #end onchange="javascript:updateIshowinglist();"  name="isShowingInListing[]" />
+
+            <input type="checkbox"  class="tip-left" title="Quick  $!ModuleName" value="" #if( $ModuleField.isQuickLead == 'True') checked="checked" #end  #if($ModuleField.Type == 'Select') disabled="disabled" #end  name="isQuickLead[]" onchange="javascript:updateIsQuickLead();" id="$ModuleField.Id"  />
+                                                                                   
+            <input type="checkbox"  class="tip-left" title="Visibility" value="" #if( $ModuleField.IsRemovable == 'False') checked="checked" #end  #if($ModuleField.isFirstDefaultValue =='True') disabled="disabled" #end    name="Isremovale[]" onchange="javascript:updateFieldApps();" id="Checkbox1"  />
+            <input type="checkbox"  class="tip-left" title="Remove from The List" name="isremoveFromList[]" #if($ModuleField.isFirstDefaultValue =='True' || $ModuleField.Type=='Select') disabled="disabled" #end  onchange="javascript:RemoveFromList();" id="rem_$ModuleField.Id" />
+            </div>
+                <input type="hidden" name="fieldid[]" id="fieldid[]" value="$ModuleField.Id" />
+                                         
+		</li>
+            #end
+            #set($k=$k+1)
+        #end
+	</ul>
+    </td>
+    </tr>
+</table>
+
+            #end
+    #end

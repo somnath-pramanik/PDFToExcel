@@ -1,0 +1,244 @@
+@{
+    var grid = Html.DevExpress().GridView(settings =>
+    {
+        settings.Name = "User List";
+        settings.CallbackRouteValues = new { Controller = "Setup", Action = "RoleDetailsPartial" };
+        
+        //settings.SettingsEditing.AddNewRowRouteValues = new { Controller = "Client", Action = "AddTicket" };
+        //settings.SettingsEditing.UpdateRowRouteValues = new { Controller = "Setup", Action = "SaveRole" };
+        //settings.SettingsEditing.DeleteRowRouteValues = new { Controller = "Setup", Action = "DeleteRole" };
+        settings.SettingsEditing.Mode = GridViewEditingMode.EditFormAndDisplayRow;
+        settings.SettingsBehavior.ConfirmDelete = true;
+        settings.SettingsBehavior.ColumnResizeMode = DevExpress.Web.ASPxClasses.ColumnResizeMode.Control;
+        settings.Settings.HorizontalScrollBarMode = ScrollBarMode.Auto;
+        settings.Styles.Row.Cursor = "pointer";
+        settings.Width = System.Web.UI.WebControls.Unit.Percentage(100);
+        
+        settings.CommandColumn.Visible = false;
+        settings.CommandColumn.ShowNewButton = false;
+        settings.CommandColumn.ShowDeleteButton = false;
+        settings.CommandColumn.ShowEditButton = false;
+        settings.Settings.ShowHeaderFilterButton = true;
+        
+        settings.KeyFieldName = "Id";
+        settings.Columns.Add(column =>
+        {
+            column.Caption = "Action";
+            column.Width = System.Web.UI.WebControls.Unit.Pixel(80);
+            column.SetDataItemTemplateContent(c =>
+            {
+                ViewContext.Writer.Write(
+                    Html.ActionLink("Edit", "ModifyRole", new { Id = DataBinder.Eval(c.DataItem, "Id") }) + "&nbsp;" +
+                    Html.ActionLink("Delete", "DeleteRole", new { Id = DataBinder.Eval(c.DataItem, "Id") },
+                        new { onclick = "return confirm('Do you really want to delete this record?')" })
+                );
+            });
+           
+            column.Settings.AllowDragDrop = DefaultBoolean.False;
+            column.Settings.AllowSort = DefaultBoolean.False;
+            //column.Width = 20;
+        });
+        settings.Columns.Add(column =>
+        {
+            column.FieldName = "Id";
+            column.Caption = "Id";
+            column.Settings.HeaderFilterMode = HeaderFilterMode.CheckedList;
+            column.Visible = false;
+        });
+        settings.Columns.Add(column =>
+        {
+            column.FieldName = "RoleName";
+            column.Caption = "Role Name";
+            column.Settings.HeaderFilterMode = HeaderFilterMode.CheckedList;
+            column.Width = System.Web.UI.WebControls.Unit.Pixel(100);
+        });
+        settings.Columns.Add(column =>
+        {
+            column.FieldName = "IsCategory";
+            column.Caption = "Category";
+
+            column.ColumnType = MVCxGridViewColumnType.CheckBox;
+            var CheckBoxProperties = column.PropertiesEdit as CheckBoxProperties;
+           // CheckBoxProperties.ValueType = typeof(bool);
+            column.Settings.HeaderFilterMode = HeaderFilterMode.CheckedList;
+            column.Width = System.Web.UI.WebControls.Unit.Pixel(80);
+        });
+
+                settings.Columns.Add(column =>
+        {
+            column.FieldName = "IsNewTicket";
+            column.Caption = "Ticket";
+            column.ColumnType = MVCxGridViewColumnType.CheckBox;
+            var CheckBoxProperties = column.PropertiesEdit as CheckBoxProperties;
+            // CheckBoxProperties.ValueType = typeof(bool);
+            column.Settings.HeaderFilterMode = HeaderFilterMode.CheckedList;
+            column.Width = System.Web.UI.WebControls.Unit.Pixel(80);
+        });
+        settings.Columns.Add(column =>
+        {
+            column.FieldName = "IsGrouopClientMapping";
+            column.Caption = "Grouop Client Mapping";
+            column.ColumnType = MVCxGridViewColumnType.CheckBox;
+            var CheckBoxProperties = column.PropertiesEdit as CheckBoxProperties;
+            // CheckBoxProperties.ValueType = typeof(bool);
+            column.Settings.HeaderFilterMode = HeaderFilterMode.CheckedList;
+            column.Width = System.Web.UI.WebControls.Unit.Pixel(80);
+        });
+        
+        settings.Columns.Add(column =>
+        {
+            column.FieldName = "IsUserAccess";
+            column.Caption = "User Access";
+            column.ColumnType = MVCxGridViewColumnType.CheckBox;
+            var CheckBoxProperties = column.PropertiesEdit as CheckBoxProperties;
+            // CheckBoxProperties.ValueType = typeof(bool);
+            column.Settings.HeaderFilterMode = HeaderFilterMode.CheckedList;
+            column.Width = System.Web.UI.WebControls.Unit.Pixel(80);
+        });
+        settings.Columns.Add(column =>
+        {
+            column.FieldName = "IsChangeStatus";
+            column.Caption = "Change Status";
+            column.ColumnType = MVCxGridViewColumnType.CheckBox;
+            var CheckBoxProperties = column.PropertiesEdit as CheckBoxProperties;
+            // CheckBoxProperties.ValueType = typeof(bool);
+            column.Settings.HeaderFilterMode = HeaderFilterMode.CheckedList;
+            column.Width = System.Web.UI.WebControls.Unit.Pixel(80);
+        });
+        settings.Columns.Add(column =>
+        {
+            column.FieldName = "IsViewInternalDiscussion";
+            column.Caption = "View Internal Discussion";
+            column.ColumnType = MVCxGridViewColumnType.CheckBox;
+            var CheckBoxProperties = column.PropertiesEdit as CheckBoxProperties;
+            // CheckBoxProperties.ValueType = typeof(bool);
+            column.Settings.HeaderFilterMode = HeaderFilterMode.CheckedList;
+            column.Width = System.Web.UI.WebControls.Unit.Pixel(80);
+        });
+        settings.Columns.Add(column =>
+        {
+            column.FieldName = "IsAssignTo";
+            column.Caption = "AssignTo";
+            column.ColumnType = MVCxGridViewColumnType.CheckBox;
+            var CheckBoxProperties = column.PropertiesEdit as CheckBoxProperties;
+            // CheckBoxProperties.ValueType = typeof(bool);
+            column.Settings.HeaderFilterMode = HeaderFilterMode.CheckedList;
+            column.Width = System.Web.UI.WebControls.Unit.Pixel(80);
+        });
+        settings.Columns.Add(column =>
+        {
+            column.FieldName = "IsApproval";
+            column.Caption = "Approval";
+            column.ColumnType = MVCxGridViewColumnType.CheckBox;
+            var CheckBoxProperties = column.PropertiesEdit as CheckBoxProperties;
+            // CheckBoxProperties.ValueType = typeof(bool);
+            column.Settings.HeaderFilterMode = HeaderFilterMode.CheckedList;
+            column.Width = System.Web.UI.WebControls.Unit.Pixel(80);
+        });
+             settings.Columns.Add(column =>
+        {
+            column.FieldName = "IsPriority";
+            column.Caption = "Priority";
+            column.ColumnType = MVCxGridViewColumnType.CheckBox;
+            var CheckBoxProperties = column.PropertiesEdit as CheckBoxProperties;
+            // CheckBoxProperties.ValueType = typeof(bool);
+            column.Settings.HeaderFilterMode = HeaderFilterMode.CheckedList;
+            column.Width = System.Web.UI.WebControls.Unit.Pixel(80);
+        });   
+        
+        settings.Columns.Add(column =>
+        {
+            column.FieldName = "IsCreateUser";
+            column.Caption = "User";
+            column.ColumnType = MVCxGridViewColumnType.CheckBox;
+            var CheckBoxProperties = column.PropertiesEdit as CheckBoxProperties;
+            // CheckBoxProperties.ValueType = typeof(bool);
+            column.Settings.HeaderFilterMode = HeaderFilterMode.CheckedList;
+            column.Width = System.Web.UI.WebControls.Unit.Pixel(80);
+        });   
+        
+        settings.Columns.Add(column =>
+        {
+            column.FieldName = "IsCreateUserGroup";
+            column.Caption = "User Group";
+            column.ColumnType = MVCxGridViewColumnType.CheckBox;
+            var CheckBoxProperties = column.PropertiesEdit as CheckBoxProperties;
+            // CheckBoxProperties.ValueType = typeof(bool);
+            column.Settings.HeaderFilterMode = HeaderFilterMode.CheckedList;
+            column.Width = System.Web.UI.WebControls.Unit.Pixel(80);
+        });  
+        settings.Columns.Add(column =>
+        {
+            column.FieldName = "IsCreateCustomer";
+            column.Caption = "Customer";
+            column.ColumnType = MVCxGridViewColumnType.CheckBox;
+            var CheckBoxProperties = column.PropertiesEdit as CheckBoxProperties;
+            // CheckBoxProperties.ValueType = typeof(bool);
+            column.Settings.HeaderFilterMode = HeaderFilterMode.CheckedList;
+            column.Width = System.Web.UI.WebControls.Unit.Pixel(80);
+        }); 
+        settings.Columns.Add(column =>
+        {
+            column.FieldName = "IsViewGroupTicket";
+            column.Caption = "Group Ticket";
+            column.ColumnType = MVCxGridViewColumnType.CheckBox;
+            var CheckBoxProperties = column.PropertiesEdit as CheckBoxProperties;
+            // CheckBoxProperties.ValueType = typeof(bool);
+            column.Settings.HeaderFilterMode = HeaderFilterMode.CheckedList;
+            column.Width = System.Web.UI.WebControls.Unit.Pixel(80);
+        }); 
+        
+        //settings.Columns.Add(column =>
+        //{
+        //    column.FieldName = "IsShowMasteFields";
+        //    column.Caption = "User Field Access";
+        //    column.ColumnType = MVCxGridViewColumnType.CheckBox;
+        //    var CheckBoxProperties = column.PropertiesEdit as CheckBoxProperties;
+        //    // CheckBoxProperties.ValueType = typeof(bool);
+        //    column.Settings.HeaderFilterMode = HeaderFilterMode.CheckedList;
+        //    column.Width = System.Web.UI.WebControls.Unit.Pixel(80);
+        //}); 
+        settings.Columns.Add(column =>
+        {
+            column.FieldName = "IsFieldAccess";
+            column.Caption = "User Field Access";
+            column.ColumnType = MVCxGridViewColumnType.CheckBox;
+            var CheckBoxProperties = column.PropertiesEdit as CheckBoxProperties;
+            // CheckBoxProperties.ValueType = typeof(bool);
+            column.Settings.HeaderFilterMode = HeaderFilterMode.CheckedList;
+            column.Width = System.Web.UI.WebControls.Unit.Pixel(80);
+        });
+        settings.Columns.Add(column =>
+        {
+            column.FieldName = "IsShowLayOut";
+            column.Caption = "LayOut Design";
+            column.ColumnType = MVCxGridViewColumnType.CheckBox;
+            var CheckBoxProperties = column.PropertiesEdit as CheckBoxProperties;
+            // CheckBoxProperties.ValueType = typeof(bool);
+            column.Settings.HeaderFilterMode = HeaderFilterMode.CheckedList;
+            column.Width = System.Web.UI.WebControls.Unit.Pixel(80);
+        }); 
+        
+        
+        
+        
+        settings.SettingsPager.FirstPageButton.Visible = true;
+        settings.SettingsPager.LastPageButton.Visible = true;
+        settings.SettingsPager.PageSizeItemSettings.Visible = true;
+        settings.SettingsPager.PageSizeItemSettings.Items = new string[] { "30", "50", "100" };
+        settings.SettingsPager.PageSize = 30;
+
+        settings.SettingsPager.Visible = true;
+        settings.Settings.ShowGroupPanel = true;
+        settings.Settings.ShowFilterRow = true;
+        settings.SettingsBehavior.AllowSelectByRowClick = true;
+
+    });
+    if (ViewData["EditError"] != null)
+    {
+        grid.SetEditErrorText((string)ViewData["EditError"]);
+        
+        
+    }
+}
+@grid.Bind(Model).GetHtml()

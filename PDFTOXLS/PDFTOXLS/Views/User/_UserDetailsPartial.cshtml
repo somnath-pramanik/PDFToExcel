@@ -1,0 +1,127 @@
+@{
+    var grid = Html.DevExpress().GridView(settings =>
+    {
+        settings.Name = "User List";
+        settings.CallbackRouteValues = new { Controller = "User", Action = "UserDetailsPartial" };
+        
+        settings.SettingsEditing.AddNewRowRouteValues = new { Controller = "User", Action = "AddTicket" };
+        settings.SettingsEditing.UpdateRowRouteValues = new { Controller = "User", Action = "UserDetailsPartialUpdate" };
+        settings.SettingsEditing.DeleteRowRouteValues = new { Controller = "User", Action = "UserDetailsPartialDelete" };
+        settings.SettingsEditing.Mode = GridViewEditingMode.EditFormAndDisplayRow;
+        settings.SettingsBehavior.ConfirmDelete = true;
+
+        settings.CommandColumn.Visible = false;
+        settings.CommandColumn.ShowNewButton = false;
+        settings.CommandColumn.ShowDeleteButton = false;
+        settings.CommandColumn.ShowEditButton = false;
+        settings.Settings.ShowHeaderFilterButton = true;
+
+        settings.Settings.HorizontalScrollBarMode = ScrollBarMode.Auto;
+        settings.Styles.Row.Cursor = "pointer";
+        settings.Width = System.Web.UI.WebControls.Unit.Percentage(100);
+        
+        settings.KeyFieldName = "Id";
+        settings.Columns.Add(column =>
+        {
+            column.Caption = "Action";
+            column.Width = System.Web.UI.WebControls.Unit.Percentage(10);
+            column.SetDataItemTemplateContent(c =>
+            {
+                ViewContext.Writer.Write(
+                    Html.ActionLink("Edit", "Modify", new { USR_Id = DataBinder.Eval(c.DataItem, "USR_Id") }) + "&nbsp;" +
+                    Html.ActionLink("Delete", "Delete", new { USR_Id = DataBinder.Eval(c.DataItem, "USR_Id") },
+                        new { onclick = "return confirm('Do you really want to delete this record?')" })
+                );
+            });
+            //column.SetHeaderTemplateContent(c =>
+            //{
+            //    ViewContext.Writer.Write(
+            //        //Html.ActionLink("New", "AddTicket", new { Id = -1 }).ToHtmlString()
+            //        //Html.ActionLink("New", "AddTicket").ToHtmlString()
+            //    );
+            //});
+            column.Settings.AllowDragDrop = DefaultBoolean.False;
+            column.Settings.AllowSort = DefaultBoolean.False;
+//            column.Width = 20;
+        });
+        settings.Columns.Add(column =>
+        {
+            column.FieldName = "role";
+            column.Caption = "Role";
+            column.Settings.HeaderFilterMode = HeaderFilterMode.CheckedList;
+            column.Width = System.Web.UI.WebControls.Unit.Percentage(15);
+            column.Visible = true;
+        });
+        //settings.Columns.Add(column =>
+        //{
+  
+        //    column.FieldName = "group_id";
+        //    column.Caption = "Group";
+        //    column.Settings.HeaderFilterMode = HeaderFilterMode.CheckedList;
+        //    column.Width = System.Web.UI.WebControls.Unit.Percentage(20);
+        //    column.Visible = false;
+
+        //});
+        //settings.Columns.Add(column =>
+        //{
+
+        //    column.FieldName = "GroupTitle";
+        //    column.Caption = "Group Title";
+        //    column.Settings.HeaderFilterMode = HeaderFilterMode.CheckedList;
+        //    column.Width = System.Web.UI.WebControls.Unit.Percentage(20);
+
+        //});
+
+        settings.Columns.Add(column =>
+        {
+            column.FieldName = "USER_FNAME";
+            column.Caption = "First Name";
+            column.Settings.HeaderFilterMode = HeaderFilterMode.CheckedList;
+            column.Width = System.Web.UI.WebControls.Unit.Percentage(15);
+
+        });
+        settings.Columns.Add(column =>
+        {
+            column.FieldName = "USER_LNAME";
+            column.Caption = "Last Name";
+            column.Settings.HeaderFilterMode = HeaderFilterMode.CheckedList;
+            column.Width = System.Web.UI.WebControls.Unit.Percentage(15);
+
+        });
+        settings.Columns.Add(column =>
+        {
+            column.FieldName = "E_MAIL";
+            column.Caption = "E Mail";
+            column.Settings.HeaderFilterMode = HeaderFilterMode.CheckedList;
+            column.Width = System.Web.UI.WebControls.Unit.Percentage(25);
+
+        });
+        settings.Columns.Add(column =>
+        {
+            column.FieldName = "WELCOM_MSG";
+            column.Caption = "Welcome Message";
+            column.Settings.HeaderFilterMode = HeaderFilterMode.CheckedList;
+            column.Width = System.Web.UI.WebControls.Unit.Percentage(15);
+
+        });
+
+        settings.SettingsPager.FirstPageButton.Visible = true;
+        settings.SettingsPager.LastPageButton.Visible = true;
+        settings.SettingsPager.PageSizeItemSettings.Visible = true;
+        settings.SettingsPager.PageSizeItemSettings.Items = new string[] { "30", "50", "100" };
+        settings.SettingsPager.PageSize = 30;
+
+        settings.SettingsPager.Visible = true;
+        settings.Settings.ShowGroupPanel = true;
+        settings.Settings.ShowFilterRow = true;
+        settings.SettingsBehavior.AllowSelectByRowClick = true;
+
+    });
+    if (ViewData["EditError"] != null)
+    {
+        grid.SetEditErrorText((string)ViewData["EditError"]);
+        
+        
+    }
+}
+@grid.Bind(Model).GetHtml()

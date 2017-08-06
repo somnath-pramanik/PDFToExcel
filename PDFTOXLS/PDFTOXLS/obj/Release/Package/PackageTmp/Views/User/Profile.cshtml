@@ -1,0 +1,80 @@
+﻿@model PDFTOXLS.Models.Ex_user_new
+<div class="row ">
+    <div class="topbtmpadding clearfix">
+        <div class="col-xs-12">
+            <div class="col-sm-1 col-md-1 col-xs-12">
+                <img src="~/Images/profile_blank_medium.gif" alt="PDFTOXLS Software" class="img-responsive profile-pic" />
+            </div>
+            <div class="col-sm-11 col-md-11 col-xs-12">
+                @Html.HiddenFor(m => m.USR_ID, new { @Value = @ViewBag.USR_ID })
+                <div class="profile-head clearfix">
+                    <div class="pull-left font-sm">@ViewBag.UserName</div>
+                    <div class="pull-right"><a href="#" onclick="javascript:OnlyLoadPage('@Url.Action("ProfileEdit", "User")');" class="btn btn-xs btn-default">Edit User</a></div>
+                </div>
+                <hr class="style-two" />
+                <div class="clearfix userhead">
+                    <p>User Information</p>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 col-md-12 col-xs-12">
+                        <table class="table marginbottom0 profiletable">
+                            <tr>
+                                <td class="width100"><strong>Email</strong></td>
+                                <td>@ViewBag.E_MAIL</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Phone No</strong></td>
+                                <td><i class="fa fa-phone"></i>&nbsp;@ViewBag.Phone</td>
+                            </tr>
+                        </table>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-12">
+            <hr class="style-one" />
+        </div>
+        <div class="col-xs-12">
+            <div class="col-sm-1 col-md-1 col-xs-12">
+                &nbsp;
+            </div>
+            <div class="col-sm-11 col-md-11 col-xs-12">
+               @* =============================*@
+               
+
+                <div id="showRghtPanel">
+
+           
+                </div>
+               
+                @*============================*@
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $.ajax({
+            type: "POST",
+            url: "/User/GetUserDetails",
+            data: { userid: jQuery("#USR_ID").val() },
+            datatype: "html",
+            success: function (data) {
+                //alert(data);
+                $('#showRghtPanel').html('');
+                $('#showRghtPanel').html(data);
+                //prepareDynamicDates();
+                //$("label.timeago").timeago();
+                //$("label.createtime").createtime();
+                //$("label.fortime").fortime();
+                //getProductList();
+            }
+        });
+
+    });
+</script>

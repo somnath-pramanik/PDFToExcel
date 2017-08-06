@@ -1,0 +1,209 @@
+D:\Web CRM New\ETASK\MvcApplication1\MvcApplication1\bin\MvcApplication1.dll
+D:\Web CRM New\ETASK\MvcApplication1\MvcApplication1\bin\MvcApplication1.pdb
+D:\Web CRM New\ETASK\MvcApplication1\MvcApplication1\bin\Antlr3.Runtime.dll
+D:\Web CRM New\ETASK\MvcApplication1\MvcApplication1\bin\EntityFramework.dll
+D:\Web CRM New\ETASK\MvcApplication1\MvcApplication1\bin\Microsoft.Web.Infrastructure.dll
+D:\Web CRM New\ETASK\MvcApplication1\MvcApplication1\bin\Newtonsoft.Json.dll
+D:\Web CRM New\ETASK\MvcApplication1\MvcApplication1\bin\System.Net.Http.Formatting.dll
+D:\Web CRM New\ETASK\MvcApplication1\MvcApplication1\bin\System.Web.Helpers.dll
+D:\Web CRM New\ETASK\MvcApplication1\MvcApplication1\bin\System.Web.Http.dll
+D:\Web CRM New\ETASK\MvcApplication1\MvcApplication1\bin\System.Web.Http.WebHost.dll
+D:\Web CRM New\ETASK\MvcApplication1\MvcApplication1\bin\System.Web.Mvc.dll
+D:\Web CRM New\ETASK\MvcApplication1\MvcApplication1\bin\System.Web.Optimization.dll
+D:\Web CRM New\ETASK\MvcApplication1\MvcApplication1\bin\System.Web.Providers.dll
+D:\Web CRM New\ETASK\MvcApplication1\MvcApplication1\bin\System.Web.Razor.dll
+D:\Web CRM New\ETASK\MvcApplication1\MvcApplication1\bin\System.Web.WebPages.Deployment.dll
+D:\Web CRM New\ETASK\MvcApplication1\MvcApplication1\bin\System.Web.WebPages.dll
+D:\Web CRM New\ETASK\MvcApplication1\MvcApplication1\bin\System.Web.WebPages.Razor.dll
+D:\Web CRM New\ETASK\MvcApplication1\MvcApplication1\bin\WebGrease.dll
+D:\Web CRM New\ETASK\MvcApplication1\MvcApplication1\bin\EntityFramework.xml
+D:\Web CRM New\ETASK\MvcApplication1\MvcApplication1\bin\Newtonsoft.Json.xml
+D:\Web CRM New\ETASK\MvcApplication1\MvcApplication1\bin\System.Net.Http.Formatting.xml
+D:\Web CRM New\ETASK\MvcApplication1\MvcApplication1\bin\System.Web.Helpers.xml
+D:\Web CRM New\ETASK\MvcApplication1\MvcApplication1\bin\System.Web.Http.xml
+D:\Web CRM New\ETASK\MvcApplication1\MvcApplication1\bin\System.Web.Http.WebHost.xml
+D:\Web CRM New\ETASK\MvcApplication1\MvcApplication1\bin\System.Web.Mvc.xml
+D:\Web CRM New\ETASK\MvcApplication1\MvcApplication1\bin\System.Web.Razor.xml
+D:\Web CRM New\ETASK\MvcApplication1\MvcApplication1\bin\System.Web.WebPages.xml
+D:\Web CRM New\ETASK\MvcApplication1\MvcApplication1\bin\System.Web.WebPages.Deployment.xml
+D:\Web CRM New\ETASK\MvcApplication1\MvcApplication1\bin\System.Web.WebPages.Razor.xml
+D:\Web CRM New\ETASK\MvcApplication1\MvcApplication1\obj\Debug\MvcApplication1.csprojResolveAssemblyReference.cache
+D:\Web CRM New\ETASK\MvcApplication1\MvcApplication1\obj\Debug\MvcApplication1.dll
+D:\Web CRM New\ETASK\MvcApplication1\MvcApplication1\obj\Debug\MvcApplication1.pdb
+D:\Web CRM New\ETASK\MvcApplication1\MvcApplication1\bin\ExactllyEnc.pdb
+D:\Web CRM New\ETASK\MvcApplication1\MvcApplication1\bin\ExactllyEnc.xml
+D:\work\prasanta\Ticket-DEV\22042015\MvcApplication1\MvcApplication1\bin\MvcApplication1.dll
+D:\work\prasanta\Ticket-DEV\22042015\MvcApplication1\MvcApplication1\bin\MvcApplication1.pdb
+D:\work\prasanta\Ticket-DEV\22042015\MvcApplication1\MvcApplication1\bin\Antlr3.Runtime.dll
+D:\work\prasanta\Ticket-DEV\22042015\MvcApplication1\MvcApplication1\bin\EntityFramework.dll
+D:\work\prasanta\Ticket-DEV\22042015\MvcApplication1\MvcApplication1\bin\Microsoft.Web.Infrastructure.dll
+D:\work\prasanta\Ticket-DEV\22042015\MvcApplication1\MvcApplication1\bin\Newtonsoft.Json.dll
+D:\work\prasanta\Ticket-DEV\22042015\MvcApplication1\MvcApplication1\bin\System.Net.Http.Formatting.dll
+D:\work\prasanta\Ticket-DEV\22042015\MvcApplication1\MvcApplication1\bin\System.Web.Helpers.dll
+D:\work\prasanta\Ticket-DEV\22042015\MvcApplication1\MvcApplication1\bin\System.Web.Http.dll
+D:\work\prasanta\Ticket-DEV\22042015\MvcApplication1\MvcApplication1\bin\System.Web.Http.WebHost.dll
+D:\work\prasanta\Ticket-DEV\22042015\MvcApplication1\MvcApplication1\bin\System.Web.Mvc.dll
+D:\work\prasanta\Ticket-DEV\22042015\MvcApplication1\MvcApplication1\bin\System.Web.Optimization.dll
+D:\work\prasanta\Ticket-DEV\22042015\MvcApplication1\MvcApplication1\bin\System.Web.Providers.dll
+D:\work\prasanta\Ticket-DEV\22042015\MvcApplication1\MvcApplication1\bin\System.Web.Razor.dll
+D:\work\prasanta\Ticket-DEV\22042015\MvcApplication1\MvcApplication1\bin\System.Web.WebPages.Deployment.dll
+D:\work\prasanta\Ticket-DEV\22042015\MvcApplication1\MvcApplication1\bin\System.Web.WebPages.dll
+D:\work\prasanta\Ticket-DEV\22042015\MvcApplication1\MvcApplication1\bin\System.Web.WebPages.Razor.dll
+D:\work\prasanta\Ticket-DEV\22042015\MvcApplication1\MvcApplication1\bin\WebGrease.dll
+D:\work\prasanta\Ticket-DEV\22042015\MvcApplication1\MvcApplication1\bin\ExactllyEnc.pdb
+D:\work\prasanta\Ticket-DEV\22042015\MvcApplication1\MvcApplication1\bin\ExactllyEnc.xml
+D:\work\prasanta\Ticket-DEV\22042015\MvcApplication1\MvcApplication1\bin\EntityFramework.xml
+D:\work\prasanta\Ticket-DEV\22042015\MvcApplication1\MvcApplication1\bin\Newtonsoft.Json.xml
+D:\work\prasanta\Ticket-DEV\22042015\MvcApplication1\MvcApplication1\bin\System.Net.Http.Formatting.xml
+D:\work\prasanta\Ticket-DEV\22042015\MvcApplication1\MvcApplication1\bin\System.Web.Helpers.xml
+D:\work\prasanta\Ticket-DEV\22042015\MvcApplication1\MvcApplication1\bin\System.Web.Http.xml
+D:\work\prasanta\Ticket-DEV\22042015\MvcApplication1\MvcApplication1\bin\System.Web.Http.WebHost.xml
+D:\work\prasanta\Ticket-DEV\22042015\MvcApplication1\MvcApplication1\bin\System.Web.Mvc.xml
+D:\work\prasanta\Ticket-DEV\22042015\MvcApplication1\MvcApplication1\bin\System.Web.Razor.xml
+D:\work\prasanta\Ticket-DEV\22042015\MvcApplication1\MvcApplication1\bin\System.Web.WebPages.xml
+D:\work\prasanta\Ticket-DEV\22042015\MvcApplication1\MvcApplication1\bin\System.Web.WebPages.Deployment.xml
+D:\work\prasanta\Ticket-DEV\22042015\MvcApplication1\MvcApplication1\bin\System.Web.WebPages.Razor.xml
+D:\work\prasanta\Ticket-DEV\22042015\MvcApplication1\MvcApplication1\obj\Debug\MvcApplication1.csprojResolveAssemblyReference.cache
+D:\work\prasanta\Ticket-DEV\22042015\MvcApplication1\MvcApplication1\obj\Debug\MvcApplication1.dll
+D:\work\prasanta\Ticket-DEV\22042015\MvcApplication1\MvcApplication1\obj\Debug\MvcApplication1.pdb
+F:\MvcApplication1\MvcApplication1\bin\MvcApplication1.dll
+F:\MvcApplication1\MvcApplication1\bin\MvcApplication1.pdb
+F:\MvcApplication1\MvcApplication1\bin\Antlr3.Runtime.dll
+F:\MvcApplication1\MvcApplication1\bin\EntityFramework.dll
+F:\MvcApplication1\MvcApplication1\bin\Microsoft.Web.Infrastructure.dll
+F:\MvcApplication1\MvcApplication1\bin\Newtonsoft.Json.dll
+F:\MvcApplication1\MvcApplication1\bin\System.Net.Http.Formatting.dll
+F:\MvcApplication1\MvcApplication1\bin\System.Web.Helpers.dll
+F:\MvcApplication1\MvcApplication1\bin\System.Web.Http.dll
+F:\MvcApplication1\MvcApplication1\bin\System.Web.Http.WebHost.dll
+F:\MvcApplication1\MvcApplication1\bin\System.Web.Mvc.dll
+F:\MvcApplication1\MvcApplication1\bin\System.Web.Optimization.dll
+F:\MvcApplication1\MvcApplication1\bin\System.Web.Providers.dll
+F:\MvcApplication1\MvcApplication1\bin\System.Web.Razor.dll
+F:\MvcApplication1\MvcApplication1\bin\System.Web.WebPages.Deployment.dll
+F:\MvcApplication1\MvcApplication1\bin\System.Web.WebPages.dll
+F:\MvcApplication1\MvcApplication1\bin\System.Web.WebPages.Razor.dll
+F:\MvcApplication1\MvcApplication1\bin\WebGrease.dll
+F:\MvcApplication1\MvcApplication1\bin\EntityFramework.xml
+F:\MvcApplication1\MvcApplication1\bin\Newtonsoft.Json.xml
+F:\MvcApplication1\MvcApplication1\bin\System.Net.Http.Formatting.xml
+F:\MvcApplication1\MvcApplication1\bin\System.Web.Helpers.xml
+F:\MvcApplication1\MvcApplication1\bin\System.Web.Http.xml
+F:\MvcApplication1\MvcApplication1\bin\System.Web.Http.WebHost.xml
+F:\MvcApplication1\MvcApplication1\bin\System.Web.Mvc.xml
+F:\MvcApplication1\MvcApplication1\bin\System.Web.Razor.xml
+F:\MvcApplication1\MvcApplication1\bin\System.Web.WebPages.xml
+F:\MvcApplication1\MvcApplication1\bin\System.Web.WebPages.Deployment.xml
+F:\MvcApplication1\MvcApplication1\bin\System.Web.WebPages.Razor.xml
+F:\MvcApplication1\MvcApplication1\obj\Debug\MvcApplication1.csprojResolveAssemblyReference.cache
+F:\MvcApplication1\MvcApplication1\obj\Debug\MvcApplication1.dll
+F:\MvcApplication1\MvcApplication1\obj\Debug\MvcApplication1.pdb
+F:\Ticket\Update\MvcApplication1\MvcApplication1\bin\MvcApplication1.dll
+F:\Ticket\Update\MvcApplication1\MvcApplication1\bin\MvcApplication1.pdb
+F:\Ticket\Update\MvcApplication1\MvcApplication1\bin\Antlr3.Runtime.dll
+F:\Ticket\Update\MvcApplication1\MvcApplication1\bin\EntityFramework.dll
+F:\Ticket\Update\MvcApplication1\MvcApplication1\bin\Microsoft.Web.Infrastructure.dll
+F:\Ticket\Update\MvcApplication1\MvcApplication1\bin\Newtonsoft.Json.dll
+F:\Ticket\Update\MvcApplication1\MvcApplication1\bin\System.Net.Http.Formatting.dll
+F:\Ticket\Update\MvcApplication1\MvcApplication1\bin\System.Web.Helpers.dll
+F:\Ticket\Update\MvcApplication1\MvcApplication1\bin\System.Web.Http.dll
+F:\Ticket\Update\MvcApplication1\MvcApplication1\bin\System.Web.Http.WebHost.dll
+F:\Ticket\Update\MvcApplication1\MvcApplication1\bin\System.Web.Mvc.dll
+F:\Ticket\Update\MvcApplication1\MvcApplication1\bin\System.Web.Optimization.dll
+F:\Ticket\Update\MvcApplication1\MvcApplication1\bin\System.Web.Providers.dll
+F:\Ticket\Update\MvcApplication1\MvcApplication1\bin\System.Web.Razor.dll
+F:\Ticket\Update\MvcApplication1\MvcApplication1\bin\System.Web.WebPages.Deployment.dll
+F:\Ticket\Update\MvcApplication1\MvcApplication1\bin\System.Web.WebPages.dll
+F:\Ticket\Update\MvcApplication1\MvcApplication1\bin\System.Web.WebPages.Razor.dll
+F:\Ticket\Update\MvcApplication1\MvcApplication1\bin\WebGrease.dll
+F:\Ticket\Update\MvcApplication1\MvcApplication1\bin\EntityFramework.xml
+F:\Ticket\Update\MvcApplication1\MvcApplication1\bin\Newtonsoft.Json.xml
+F:\Ticket\Update\MvcApplication1\MvcApplication1\bin\System.Net.Http.Formatting.xml
+F:\Ticket\Update\MvcApplication1\MvcApplication1\bin\System.Web.Helpers.xml
+F:\Ticket\Update\MvcApplication1\MvcApplication1\bin\System.Web.Http.xml
+F:\Ticket\Update\MvcApplication1\MvcApplication1\bin\System.Web.Http.WebHost.xml
+F:\Ticket\Update\MvcApplication1\MvcApplication1\bin\System.Web.Mvc.xml
+F:\Ticket\Update\MvcApplication1\MvcApplication1\bin\System.Web.Razor.xml
+F:\Ticket\Update\MvcApplication1\MvcApplication1\bin\System.Web.WebPages.xml
+F:\Ticket\Update\MvcApplication1\MvcApplication1\bin\System.Web.WebPages.Deployment.xml
+F:\Ticket\Update\MvcApplication1\MvcApplication1\bin\System.Web.WebPages.Razor.xml
+F:\Ticket\Update\MvcApplication1\MvcApplication1\obj\Debug\MvcApplication1.csprojResolveAssemblyReference.cache
+F:\Ticket\Update\MvcApplication1\MvcApplication1\obj\Debug\MvcApplication1.dll
+F:\Ticket\Update\MvcApplication1\MvcApplication1\obj\Debug\MvcApplication1.pdb
+D:\Web CRM New\Ticket\MvcApplication1\MvcApplication1\bin\Views\Home\Index.cshtml
+D:\Web CRM New\Ticket\MvcApplication1\MvcApplication1\bin\MvcApplication1.dll
+D:\Web CRM New\Ticket\MvcApplication1\MvcApplication1\bin\MvcApplication1.pdb
+D:\Web CRM New\Ticket\MvcApplication1\MvcApplication1\bin\Antlr3.Runtime.dll
+D:\Web CRM New\Ticket\MvcApplication1\MvcApplication1\bin\DevExpress.Data.v14.1.dll
+D:\Web CRM New\Ticket\MvcApplication1\MvcApplication1\bin\DevExpress.PivotGrid.v14.1.Core.dll
+D:\Web CRM New\Ticket\MvcApplication1\MvcApplication1\bin\DevExpress.Printing.v14.1.Core.dll
+D:\Web CRM New\Ticket\MvcApplication1\MvcApplication1\bin\DevExpress.Utils.v14.1.dll
+D:\Web CRM New\Ticket\MvcApplication1\MvcApplication1\bin\DevExpress.Web.Mvc.v14.1.dll
+D:\Web CRM New\Ticket\MvcApplication1\MvcApplication1\bin\DevExpress.Web.v14.1.dll
+D:\Web CRM New\Ticket\MvcApplication1\MvcApplication1\bin\DevExpress.Xpo.v14.1.dll
+D:\Web CRM New\Ticket\MvcApplication1\MvcApplication1\bin\DevExpress.XtraPivotGrid.v14.1.dll
+D:\Web CRM New\Ticket\MvcApplication1\MvcApplication1\bin\EntityFramework.dll
+D:\Web CRM New\Ticket\MvcApplication1\MvcApplication1\bin\Microsoft.Web.Infrastructure.dll
+D:\Web CRM New\Ticket\MvcApplication1\MvcApplication1\bin\Newtonsoft.Json.dll
+D:\Web CRM New\Ticket\MvcApplication1\MvcApplication1\bin\System.Net.Http.Formatting.dll
+D:\Web CRM New\Ticket\MvcApplication1\MvcApplication1\bin\System.Web.Helpers.dll
+D:\Web CRM New\Ticket\MvcApplication1\MvcApplication1\bin\System.Web.Http.dll
+D:\Web CRM New\Ticket\MvcApplication1\MvcApplication1\bin\System.Web.Http.WebHost.dll
+D:\Web CRM New\Ticket\MvcApplication1\MvcApplication1\bin\System.Web.Mvc.dll
+D:\Web CRM New\Ticket\MvcApplication1\MvcApplication1\bin\System.Web.Optimization.dll
+D:\Web CRM New\Ticket\MvcApplication1\MvcApplication1\bin\System.Web.Providers.dll
+D:\Web CRM New\Ticket\MvcApplication1\MvcApplication1\bin\System.Web.Razor.dll
+D:\Web CRM New\Ticket\MvcApplication1\MvcApplication1\bin\System.Web.WebPages.Deployment.dll
+D:\Web CRM New\Ticket\MvcApplication1\MvcApplication1\bin\System.Web.WebPages.dll
+D:\Web CRM New\Ticket\MvcApplication1\MvcApplication1\bin\System.Web.WebPages.Razor.dll
+D:\Web CRM New\Ticket\MvcApplication1\MvcApplication1\bin\WebGrease.dll
+D:\Web CRM New\Ticket\MvcApplication1\MvcApplication1\bin\DevExpress.Data.v14.1.xml
+D:\Web CRM New\Ticket\MvcApplication1\MvcApplication1\bin\DevExpress.PivotGrid.v14.1.Core.xml
+D:\Web CRM New\Ticket\MvcApplication1\MvcApplication1\bin\DevExpress.Printing.v14.1.Core.xml
+D:\Web CRM New\Ticket\MvcApplication1\MvcApplication1\bin\DevExpress.Utils.v14.1.xml
+D:\Web CRM New\Ticket\MvcApplication1\MvcApplication1\bin\DevExpress.Web.Mvc.v14.1.xml
+D:\Web CRM New\Ticket\MvcApplication1\MvcApplication1\bin\DevExpress.Web.v14.1.xml
+D:\Web CRM New\Ticket\MvcApplication1\MvcApplication1\bin\DevExpress.Xpo.v14.1.xml
+D:\Web CRM New\Ticket\MvcApplication1\MvcApplication1\bin\DevExpress.XtraPivotGrid.v14.1.xml
+D:\Web CRM New\Ticket\MvcApplication1\MvcApplication1\bin\EntityFramework.xml
+D:\Web CRM New\Ticket\MvcApplication1\MvcApplication1\bin\Newtonsoft.Json.xml
+D:\Web CRM New\Ticket\MvcApplication1\MvcApplication1\bin\System.Net.Http.Formatting.xml
+D:\Web CRM New\Ticket\MvcApplication1\MvcApplication1\bin\System.Web.Helpers.xml
+D:\Web CRM New\Ticket\MvcApplication1\MvcApplication1\bin\System.Web.Http.xml
+D:\Web CRM New\Ticket\MvcApplication1\MvcApplication1\bin\System.Web.Http.WebHost.xml
+D:\Web CRM New\Ticket\MvcApplication1\MvcApplication1\bin\System.Web.Mvc.xml
+D:\Web CRM New\Ticket\MvcApplication1\MvcApplication1\bin\System.Web.Razor.xml
+D:\Web CRM New\Ticket\MvcApplication1\MvcApplication1\bin\System.Web.WebPages.xml
+D:\Web CRM New\Ticket\MvcApplication1\MvcApplication1\bin\System.Web.WebPages.Deployment.xml
+D:\Web CRM New\Ticket\MvcApplication1\MvcApplication1\bin\System.Web.WebPages.Razor.xml
+D:\Web CRM New\Ticket\MvcApplication1\MvcApplication1\bin\de\DevExpress.Data.v14.1.resources.dll
+D:\Web CRM New\Ticket\MvcApplication1\MvcApplication1\bin\es\DevExpress.Data.v14.1.resources.dll
+D:\Web CRM New\Ticket\MvcApplication1\MvcApplication1\bin\ja\DevExpress.Data.v14.1.resources.dll
+D:\Web CRM New\Ticket\MvcApplication1\MvcApplication1\bin\ru\DevExpress.Data.v14.1.resources.dll
+D:\Web CRM New\Ticket\MvcApplication1\MvcApplication1\bin\de\DevExpress.PivotGrid.v14.1.Core.resources.dll
+D:\Web CRM New\Ticket\MvcApplication1\MvcApplication1\bin\es\DevExpress.PivotGrid.v14.1.Core.resources.dll
+D:\Web CRM New\Ticket\MvcApplication1\MvcApplication1\bin\ja\DevExpress.PivotGrid.v14.1.Core.resources.dll
+D:\Web CRM New\Ticket\MvcApplication1\MvcApplication1\bin\ru\DevExpress.PivotGrid.v14.1.Core.resources.dll
+D:\Web CRM New\Ticket\MvcApplication1\MvcApplication1\bin\de\DevExpress.Printing.v14.1.Core.resources.dll
+D:\Web CRM New\Ticket\MvcApplication1\MvcApplication1\bin\es\DevExpress.Printing.v14.1.Core.resources.dll
+D:\Web CRM New\Ticket\MvcApplication1\MvcApplication1\bin\ja\DevExpress.Printing.v14.1.Core.resources.dll
+D:\Web CRM New\Ticket\MvcApplication1\MvcApplication1\bin\ru\DevExpress.Printing.v14.1.Core.resources.dll
+D:\Web CRM New\Ticket\MvcApplication1\MvcApplication1\bin\de\DevExpress.Utils.v14.1.resources.dll
+D:\Web CRM New\Ticket\MvcApplication1\MvcApplication1\bin\es\DevExpress.Utils.v14.1.resources.dll
+D:\Web CRM New\Ticket\MvcApplication1\MvcApplication1\bin\ja\DevExpress.Utils.v14.1.resources.dll
+D:\Web CRM New\Ticket\MvcApplication1\MvcApplication1\bin\ru\DevExpress.Utils.v14.1.resources.dll
+D:\Web CRM New\Ticket\MvcApplication1\MvcApplication1\bin\de\DevExpress.Web.v14.1.resources.dll
+D:\Web CRM New\Ticket\MvcApplication1\MvcApplication1\bin\es\DevExpress.Web.v14.1.resources.dll
+D:\Web CRM New\Ticket\MvcApplication1\MvcApplication1\bin\ja\DevExpress.Web.v14.1.resources.dll
+D:\Web CRM New\Ticket\MvcApplication1\MvcApplication1\bin\ru\DevExpress.Web.v14.1.resources.dll
+D:\Web CRM New\Ticket\MvcApplication1\MvcApplication1\bin\de\DevExpress.Xpo.v14.1.resources.dll
+D:\Web CRM New\Ticket\MvcApplication1\MvcApplication1\bin\es\DevExpress.Xpo.v14.1.resources.dll
+D:\Web CRM New\Ticket\MvcApplication1\MvcApplication1\bin\ja\DevExpress.Xpo.v14.1.resources.dll
+D:\Web CRM New\Ticket\MvcApplication1\MvcApplication1\bin\ru\DevExpress.Xpo.v14.1.resources.dll
+D:\Web CRM New\Ticket\MvcApplication1\MvcApplication1\bin\de\DevExpress.XtraPivotGrid.v14.1.resources.dll
+D:\Web CRM New\Ticket\MvcApplication1\MvcApplication1\bin\es\DevExpress.XtraPivotGrid.v14.1.resources.dll
+D:\Web CRM New\Ticket\MvcApplication1\MvcApplication1\bin\ja\DevExpress.XtraPivotGrid.v14.1.resources.dll
+D:\Web CRM New\Ticket\MvcApplication1\MvcApplication1\bin\ru\DevExpress.XtraPivotGrid.v14.1.resources.dll
+D:\Web CRM New\Ticket\MvcApplication1\MvcApplication1\obj\Debug\MvcApplication1.dll
+D:\Web CRM New\Ticket\MvcApplication1\MvcApplication1\obj\Debug\MvcApplication1.pdb
+D:\Web CRM New\Ticket\MvcApplication1\MvcApplication1\obj\Debug\MvcApplication1.csprojResolveAssemblyReference.cache

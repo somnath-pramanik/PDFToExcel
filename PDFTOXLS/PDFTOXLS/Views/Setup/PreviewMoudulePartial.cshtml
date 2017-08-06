@@ -1,0 +1,57 @@
+﻿@using PDFTOXLS.Models;
+@{
+    var _mdfld = ViewBag.ActiveField;
+}
+
+@{
+    var grid = Html.DevExpress().GridView(settings =>
+    {
+        settings.Name = "Ticket List";
+        settings.CallbackRouteValues = new { Controller = "Setup", Action = "PreviewMoudulePartial" };
+
+        settings.SettingsEditing.Mode = GridViewEditingMode.EditFormAndDisplayRow;
+        settings.SettingsBehavior.ConfirmDelete = true;
+        settings.SettingsBehavior.ColumnResizeMode = DevExpress.Web.ASPxClasses.ColumnResizeMode.Control;
+        settings.CommandColumn.Visible = false;
+        settings.CommandColumn.ShowNewButton = false;
+        settings.CommandColumn.ShowDeleteButton = false;
+        settings.CommandColumn.ShowEditButton = false;
+        settings.Settings.ShowHeaderFilterButton = true;
+        settings.Settings.HorizontalScrollBarMode = ScrollBarMode.Auto;
+        settings.Styles.Row.Cursor = "pointer";
+        settings.Width = System.Web.UI.WebControls.Unit.Percentage(98);
+        settings.KeyFieldName = "Id";
+        
+        foreach (var fld in _mdfld)
+        {
+            settings.Columns.Add(col =>
+            {
+                col.Caption = fld.ColCaption;
+                col.FieldName = fld.ColName;
+                col.Visible = true;
+                col.Settings.HeaderFilterMode = HeaderFilterMode.CheckedList;
+                col.Width = System.Web.UI.WebControls.Unit.Pixel(Convert.ToInt32(fld.Colwidth));
+            });
+        }
+
+        
+        settings.SettingsPager.FirstPageButton.Visible = true;
+        settings.SettingsPager.LastPageButton.Visible = true;
+        settings.SettingsPager.PageSizeItemSettings.Visible = true;
+        settings.SettingsPager.PageSizeItemSettings.Items = new string[] { "30", "50", "100" };
+        settings.SettingsPager.PageSize = 10;
+        settings.SettingsPager.Visible = true;
+        settings.Settings.ShowGroupPanel = true;
+        settings.Settings.ShowFilterRow = true;
+        settings.SettingsBehavior.AllowSelectByRowClick = true;
+
+    });
+    if (ViewData["EditError"] != null)
+    {
+        grid.SetEditErrorText((string)ViewData["EditError"]);
+
+
+    }
+}
+@grid.Bind(Model).GetHtml()
+

@@ -1,0 +1,1145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <LastUsedBuildConfiguration>Release</LastUsedBuildConfiguration>
+    <LastUsedPlatform>Any CPU</LastUsedPlatform>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/Antlr3.Runtime.dll">
+      <publishTime>04/18/2015 12:55:32</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.Data.v14.1.resources.dll">
+      <publishTime>08/04/2015 10:15:14</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.PivotGrid.v14.1.Core.resources.dll">
+      <publishTime>08/04/2015 10:15:41</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.Printing.v14.1.Core.resources.dll">
+      <publishTime>08/04/2015 10:15:29</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.Utils.v14.1.resources.dll">
+      <publishTime>08/04/2015 10:15:30</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.Web.v14.1.resources.dll">
+      <publishTime>08/04/2015 10:15:09</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.Xpo.v14.1.resources.dll">
+      <publishTime>08/04/2015 10:15:33</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.XtraPivotGrid.v14.1.resources.dll">
+      <publishTime>08/04/2015 10:15:41</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Data.v14.1.dll">
+      <publishTime>08/04/2015 10:15:14</publishTime>
+    </File>
+    <File Include="bin/DevExpress.PivotGrid.v14.1.Core.dll">
+      <publishTime>08/04/2015 10:15:41</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Printing.v14.1.Core.dll">
+      <publishTime>08/04/2015 10:15:29</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Utils.v14.1.dll">
+      <publishTime>08/04/2015 10:15:30</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Web.Mvc.v14.1.dll">
+      <publishTime>08/04/2015 10:15:28</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Web.v14.1.dll">
+      <publishTime>08/04/2015 10:15:09</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Xpo.v14.1.dll">
+      <publishTime>08/04/2015 10:15:33</publishTime>
+    </File>
+    <File Include="bin/DevExpress.XtraPivotGrid.v14.1.dll">
+      <publishTime>08/04/2015 10:15:41</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>04/18/2015 12:55:26</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.Data.v14.1.resources.dll">
+      <publishTime>08/04/2015 10:15:14</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.PivotGrid.v14.1.Core.resources.dll">
+      <publishTime>08/04/2015 10:15:41</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.Printing.v14.1.Core.resources.dll">
+      <publishTime>08/04/2015 10:15:29</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.Utils.v14.1.resources.dll">
+      <publishTime>08/04/2015 10:15:30</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.Web.v14.1.resources.dll">
+      <publishTime>08/04/2015 10:15:09</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.Xpo.v14.1.resources.dll">
+      <publishTime>08/04/2015 10:15:33</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.XtraPivotGrid.v14.1.resources.dll">
+      <publishTime>08/04/2015 10:15:41</publishTime>
+    </File>
+    <File Include="bin/ExactllyEnc.dll">
+      <publishTime>04/18/2015 14:18:06</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.Data.v14.1.resources.dll">
+      <publishTime>08/04/2015 10:15:14</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.PivotGrid.v14.1.Core.resources.dll">
+      <publishTime>08/04/2015 10:15:41</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.Printing.v14.1.Core.resources.dll">
+      <publishTime>08/04/2015 10:15:29</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.Utils.v14.1.resources.dll">
+      <publishTime>08/04/2015 10:15:30</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.Web.v14.1.resources.dll">
+      <publishTime>08/04/2015 10:15:09</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.Xpo.v14.1.resources.dll">
+      <publishTime>08/04/2015 10:15:33</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.XtraPivotGrid.v14.1.resources.dll">
+      <publishTime>08/04/2015 10:15:41</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>04/18/2015 12:55:32</publishTime>
+    </File>
+    <File Include="bin/MvcApplication1.dll">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>04/18/2015 12:55:32</publishTime>
+    </File>
+    <File Include="bin/PHandler1.ashx">
+      <publishTime>05/29/2015 11:23:08</publishTime>
+    </File>
+    <File Include="bin/PHandler1.ashx.cs">
+      <publishTime>05/30/2015 22:16:21</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.Data.v14.1.resources.dll">
+      <publishTime>08/04/2015 10:15:14</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.PivotGrid.v14.1.Core.resources.dll">
+      <publishTime>08/04/2015 10:15:41</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.Printing.v14.1.Core.resources.dll">
+      <publishTime>08/04/2015 10:15:29</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.Utils.v14.1.resources.dll">
+      <publishTime>08/04/2015 10:15:30</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.Web.v14.1.resources.dll">
+      <publishTime>08/04/2015 10:15:10</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.Xpo.v14.1.resources.dll">
+      <publishTime>08/04/2015 10:15:33</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.XtraPivotGrid.v14.1.resources.dll">
+      <publishTime>08/04/2015 10:15:41</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.Formatting.dll">
+      <publishTime>04/18/2015 12:55:32</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>04/18/2015 12:55:32</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.dll">
+      <publishTime>04/18/2015 12:55:32</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.WebHost.dll">
+      <publishTime>04/18/2015 12:55:32</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>04/18/2015 12:55:32</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.dll">
+      <publishTime>04/18/2015 12:55:32</publishTime>
+    </File>
+    <File Include="bin/System.Web.Providers.dll">
+      <publishTime>04/18/2015 12:55:32</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>04/18/2015 12:55:32</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>04/18/2015 12:55:32</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>04/18/2015 12:55:32</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>04/18/2015 12:55:32</publishTime>
+    </File>
+    <File Include="bin/TicketMessage.dll">
+      <publishTime>06/06/2015 10:22:44</publishTime>
+    </File>
+    <File Include="bin/TicketSystem.dll">
+      <publishTime>11/09/2016 12:10:39</publishTime>
+    </File>
+    <File Include="bin/Views/Home/Index.cshtml">
+      <publishTime>06/16/2015 19:05:44</publishTime>
+    </File>
+    <File Include="bin/WebGrease.dll">
+      <publishTime>04/18/2015 12:55:32</publishTime>
+    </File>
+    <File Include="Content/Copy of Site.css">
+      <publishTime>06/06/2015 14:34:31</publishTime>
+    </File>
+    <File Include="Content/Site.css">
+      <publishTime>09/04/2015 12:35:57</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-bg_flat_0_aaaaaa_40x100.png">
+      <publishTime>04/18/2015 12:55:30</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-bg_flat_75_ffffff_40x100.png">
+      <publishTime>04/18/2015 12:55:30</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-bg_glass_55_fbf9ee_1x400.png">
+      <publishTime>04/18/2015 12:55:30</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-bg_glass_65_ffffff_1x400.png">
+      <publishTime>04/18/2015 12:55:30</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-bg_glass_75_dadada_1x400.png">
+      <publishTime>04/18/2015 12:55:30</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-bg_glass_75_e6e6e6_1x400.png">
+      <publishTime>04/18/2015 12:55:30</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-bg_glass_95_fef1ec_1x400.png">
+      <publishTime>04/18/2015 12:55:30</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-bg_highlight-soft_75_cccccc_1x100.png">
+      <publishTime>04/18/2015 12:55:30</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-icons_222222_256x240.png">
+      <publishTime>04/18/2015 12:55:30</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-icons_2e83ff_256x240.png">
+      <publishTime>04/18/2015 12:55:30</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-icons_454545_256x240.png">
+      <publishTime>04/18/2015 12:55:30</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-icons_888888_256x240.png">
+      <publishTime>04/18/2015 12:55:30</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-icons_cd0a0a_256x240.png">
+      <publishTime>04/18/2015 12:55:30</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery-ui.css">
+      <publishTime>04/18/2015 12:55:30</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.accordion.css">
+      <publishTime>04/18/2015 12:55:30</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.all.css">
+      <publishTime>04/18/2015 12:55:30</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.autocomplete.css">
+      <publishTime>04/18/2015 12:55:30</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.base.css">
+      <publishTime>04/18/2015 12:55:30</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.button.css">
+      <publishTime>04/18/2015 12:55:30</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.core.css">
+      <publishTime>04/18/2015 12:55:30</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.datepicker.css">
+      <publishTime>04/18/2015 12:55:30</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.dialog.css">
+      <publishTime>04/18/2015 12:55:30</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.progressbar.css">
+      <publishTime>04/18/2015 12:55:30</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.resizable.css">
+      <publishTime>04/18/2015 12:55:30</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.selectable.css">
+      <publishTime>04/18/2015 12:55:30</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.slider.css">
+      <publishTime>04/18/2015 12:55:30</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.tabs.css">
+      <publishTime>04/18/2015 12:55:30</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.theme.css">
+      <publishTime>04/18/2015 12:55:30</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/images/ui-bg_flat_0_aaaaaa_40x100.png">
+      <publishTime>04/18/2015 12:55:30</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/images/ui-bg_flat_75_ffffff_40x100.png">
+      <publishTime>04/18/2015 12:55:30</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/images/ui-bg_glass_55_fbf9ee_1x400.png">
+      <publishTime>04/18/2015 12:55:30</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/images/ui-bg_glass_65_ffffff_1x400.png">
+      <publishTime>04/18/2015 12:55:30</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/images/ui-bg_glass_75_dadada_1x400.png">
+      <publishTime>04/18/2015 12:55:30</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/images/ui-bg_glass_75_e6e6e6_1x400.png">
+      <publishTime>04/18/2015 12:55:30</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/images/ui-bg_glass_95_fef1ec_1x400.png">
+      <publishTime>04/18/2015 12:55:30</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/images/ui-bg_highlight-soft_75_cccccc_1x100.png">
+      <publishTime>04/18/2015 12:55:30</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/images/ui-icons_222222_256x240.png">
+      <publishTime>04/18/2015 12:55:30</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/images/ui-icons_2e83ff_256x240.png">
+      <publishTime>04/18/2015 12:55:30</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/images/ui-icons_454545_256x240.png">
+      <publishTime>04/18/2015 12:55:30</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/images/ui-icons_888888_256x240.png">
+      <publishTime>04/18/2015 12:55:30</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/images/ui-icons_cd0a0a_256x240.png">
+      <publishTime>04/18/2015 12:55:30</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/jquery-ui.min.css">
+      <publishTime>04/18/2015 12:55:30</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/jquery.ui.accordion.min.css">
+      <publishTime>04/18/2015 12:55:30</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/jquery.ui.autocomplete.min.css">
+      <publishTime>04/18/2015 12:55:30</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/jquery.ui.button.min.css">
+      <publishTime>04/18/2015 12:55:30</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/jquery.ui.core.min.css">
+      <publishTime>04/18/2015 12:55:30</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/jquery.ui.datepicker.min.css">
+      <publishTime>04/18/2015 12:55:30</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/jquery.ui.dialog.min.css">
+      <publishTime>04/18/2015 12:55:30</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/jquery.ui.progressbar.min.css">
+      <publishTime>04/18/2015 12:55:30</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/jquery.ui.resizable.min.css">
+      <publishTime>04/18/2015 12:55:30</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/jquery.ui.selectable.min.css">
+      <publishTime>04/18/2015 12:55:30</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/jquery.ui.slider.min.css">
+      <publishTime>04/18/2015 12:55:30</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/jquery.ui.tabs.min.css">
+      <publishTime>04/18/2015 12:55:30</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/jquery.ui.theme.min.css">
+      <publishTime>04/18/2015 12:55:30</publishTime>
+    </File>
+    <File Include="EmailTemplate/ForgotPasswordTemplate.html">
+      <publishTime>06/16/2015 15:00:21</publishTime>
+    </File>
+    <File Include="favicon.ico">
+      <publishTime>05/21/2015 13:34:00</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>05/29/2015 11:14:22</publishTime>
+    </File>
+    <File Include="Images/accent.png">
+      <publishTime>05/21/2014 10:04:56</publishTime>
+    </File>
+    <File Include="Images/bullet.png">
+      <publishTime>05/21/2014 10:04:56</publishTime>
+    </File>
+    <File Include="Images/heroAccent.png">
+      <publishTime>05/21/2014 10:04:56</publishTime>
+    </File>
+    <File Include="Images/orderedList0.png">
+      <publishTime>05/21/2014 10:04:56</publishTime>
+    </File>
+    <File Include="Images/orderedList1.png">
+      <publishTime>05/21/2014 10:04:56</publishTime>
+    </File>
+    <File Include="Images/orderedList2.png">
+      <publishTime>05/21/2014 10:04:56</publishTime>
+    </File>
+    <File Include="Images/orderedList3.png">
+      <publishTime>05/21/2014 10:04:56</publishTime>
+    </File>
+    <File Include="Images/orderedList4.png">
+      <publishTime>05/21/2014 10:04:56</publishTime>
+    </File>
+    <File Include="Images/orderedList5.png">
+      <publishTime>05/21/2014 10:04:56</publishTime>
+    </File>
+    <File Include="Images/orderedList6.png">
+      <publishTime>05/21/2014 10:04:56</publishTime>
+    </File>
+    <File Include="Images/orderedList7.png">
+      <publishTime>05/21/2014 10:04:56</publishTime>
+    </File>
+    <File Include="Images/orderedList8.png">
+      <publishTime>05/21/2014 10:04:56</publishTime>
+    </File>
+    <File Include="Images/orderedList9.png">
+      <publishTime>05/21/2014 10:04:56</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>04/18/2015 12:55:34</publishTime>
+    </File>
+    <File Include="PHandler1.ashx">
+      <publishTime>05/29/2015 11:23:08</publishTime>
+    </File>
+    <File Include="Scripts/idle_timer.js">
+      <publishTime>07/14/2013 19:11:54</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.7.1.js">
+      <publishTime>04/18/2015 12:55:28</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.7.1.min.js">
+      <publishTime>04/18/2015 12:55:28</publishTime>
+    </File>
+    <File Include="Scripts/jquery-ui-1.8.20.js">
+      <publishTime>05/30/2015 19:32:28</publishTime>
+    </File>
+    <File Include="Scripts/jquery-ui-1.8.20.min.js">
+      <publishTime>04/18/2015 12:55:30</publishTime>
+    </File>
+    <File Include="Scripts/jquery.form.js">
+      <publishTime>01/23/2014 19:20:22</publishTime>
+    </File>
+    <File Include="Scripts/jquery.unobtrusive-ajax.js">
+      <publishTime>05/30/2015 11:53:45</publishTime>
+    </File>
+    <File Include="Scripts/jquery.unobtrusive-ajax.min.js">
+      <publishTime>05/14/2015 21:51:11</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.js">
+      <publishTime>05/14/2015 21:49:12</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.min.js">
+      <publishTime>05/14/2015 21:49:11</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.js">
+      <publishTime>05/15/2015 22:10:35</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.min.js">
+      <publishTime>05/14/2015 21:51:11</publishTime>
+    </File>
+    <File Include="Scripts/knockout-2.1.0.debug.js">
+      <publishTime>04/18/2015 12:55:34</publishTime>
+    </File>
+    <File Include="Scripts/knockout-2.1.0.js">
+      <publishTime>04/18/2015 12:55:34</publishTime>
+    </File>
+    <File Include="Scripts/modernizr-2.5.3.js">
+      <publishTime>04/18/2015 12:55:30</publishTime>
+    </File>
+    <File Include="Scripts/timeformatjs/jquery.createtime.js">
+      <publishTime>05/21/2015 20:39:07</publishTime>
+    </File>
+    <File Include="Scripts/timeformatjs/jquery.fortime.js">
+      <publishTime>05/21/2015 21:36:46</publishTime>
+    </File>
+    <File Include="Scripts/timeformatjs/jquery.timeago.js">
+      <publishTime>05/21/2015 20:45:01</publishTime>
+    </File>
+    <File Include="Scripts/_references.js">
+      <publishTime>04/18/2015 12:55:30</publishTime>
+    </File>
+    <File Include="Views/AMCDetails/RenewProduct.cshtml">
+      <publishTime>01/21/2016 15:04:54</publishTime>
+    </File>
+    <File Include="Views/AMCDetails/_AjaxAddTicketForm.cshtml">
+      <publishTime>01/06/2016 12:26:16</publishTime>
+    </File>
+    <File Include="Views/AMCDetails/_AjaxAMCRenewDateFiled.cshtml">
+      <publishTime>01/07/2016 15:26:26</publishTime>
+    </File>
+    <File Include="Views/AMCDetails/_AjaxShowClientDetails.cshtml">
+      <publishTime>01/21/2016 15:21:22</publishTime>
+    </File>
+    <File Include="Views/AMCDetails/_AmcDetailsModify.cshtml">
+      <publishTime>01/21/2016 15:04:51</publishTime>
+    </File>
+    <File Include="Views/AMCDetails/_errorMessage.cshtml">
+      <publishTime>01/21/2016 12:47:14</publishTime>
+    </File>
+    <File Include="Views/BusinessCalendar/AddBusinessCalendar.cshtml">
+      <publishTime>05/30/2015 14:39:52</publishTime>
+    </File>
+    <File Include="Views/BusinessCalendar/AjaxBusinessCalendar.cshtml">
+      <publishTime>05/26/2015 15:51:09</publishTime>
+    </File>
+    <File Include="Views/BusinessCalendar/AjaxBusinessCalendarremoved.cshtml">
+      <publishTime>05/21/2015 17:50:02</publishTime>
+    </File>
+    <File Include="Views/BusinessCalendar/BusinessCalendarPartial.cshtml">
+      <publishTime>05/18/2015 20:02:11</publishTime>
+    </File>
+    <File Include="Views/BusinessCalendar/List.cshtml">
+      <publishTime>07/23/2015 20:15:35</publishTime>
+    </File>
+    <File Include="Views/BusinessCalendar/_Blank.cshtml">
+      <publishTime>05/18/2015 11:40:35</publishTime>
+    </File>
+    <File Include="Views/Changes/AddTicket.cshtml">
+      <publishTime>11/18/2015 10:44:26</publishTime>
+    </File>
+    <File Include="Views/Changes/Approval.cshtml">
+      <publishTime>06/11/2015 16:29:02</publishTime>
+    </File>
+    <File Include="Views/Changes/AssigneTodeveloper.cshtml">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Views/Changes/AssignTodeveloper.cshtml">
+      <publishTime>08/20/2015 17:57:24</publishTime>
+    </File>
+    <File Include="Views/Changes/BulkAction.cshtml">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Views/Changes/Category.cshtml">
+      <publishTime>06/11/2015 16:28:42</publishTime>
+    </File>
+    <File Include="Views/Changes/ChangePickup.cshtml">
+      <publishTime>06/11/2015 16:28:35</publishTime>
+    </File>
+    <File Include="Views/Changes/ChangePriority.cshtml">
+      <publishTime>06/11/2015 16:28:29</publishTime>
+    </File>
+    <File Include="Views/Changes/ChangeStatus.cshtml">
+      <publishTime>06/25/2015 14:59:24</publishTime>
+    </File>
+    <File Include="Views/Changes/ClientList.cshtml">
+      <publishTime>05/04/2015 12:36:44</publishTime>
+    </File>
+    <File Include="Views/Changes/Close.cshtml">
+      <publishTime>06/11/2015 16:28:17</publishTime>
+    </File>
+    <File Include="Views/Changes/Copy of List.cshtml">
+      <publishTime>05/29/2015 11:23:11</publishTime>
+    </File>
+    <File Include="Views/Changes/Dashboard.cshtml">
+      <publishTime>04/22/2015 20:38:54</publishTime>
+    </File>
+    <File Include="Views/Changes/DefineGroup.cshtml">
+      <publishTime>04/22/2015 10:36:40</publishTime>
+    </File>
+    <File Include="Views/Changes/GetDiscussionList.cshtml">
+      <publishTime>06/05/2015 18:45:10</publishTime>
+    </File>
+    <File Include="Views/Changes/List.cshtml">
+      <publishTime>03/19/2016 13:09:53</publishTime>
+    </File>
+    <File Include="Views/Changes/ModuleList.cshtml">
+      <publishTime>06/03/2015 13:11:25</publishTime>
+    </File>
+    <File Include="Views/Changes/SqlFilter.cshtml">
+      <publishTime>06/08/2015 11:55:24</publishTime>
+    </File>
+    <File Include="Views/Changes/TicketDetails.cshtml">
+      <publishTime>03/19/2016 13:16:55</publishTime>
+    </File>
+    <File Include="Views/Changes/_AjaxAddTicketForm.cshtml">
+      <publishTime>07/23/2015 10:54:58</publishTime>
+    </File>
+    <File Include="Views/Changes/_AjaxCommentBody.cshtml">
+      <publishTime>06/12/2015 14:30:16</publishTime>
+    </File>
+    <File Include="Views/Changes/_AjaxFilter.cshtml">
+      <publishTime>07/15/2015 18:15:56</publishTime>
+    </File>
+    <File Include="Views/Changes/_AjaxListBody.cshtml">
+      <publishTime>03/19/2016 12:34:35</publishTime>
+    </File>
+    <File Include="Views/Changes/_AjaxProduct.cshtml">
+      <publishTime>06/03/2015 13:13:21</publishTime>
+    </File>
+    <File Include="Views/Changes/_AjaxShowClientDetails.cshtml">
+      <publishTime>11/18/2015 10:38:12</publishTime>
+    </File>
+    <File Include="Views/Changes/_AjaxStatus.cshtml">
+      <publishTime>05/29/2015 11:23:10</publishTime>
+    </File>
+    <File Include="Views/Changes/_Blank.cshtml">
+      <publishTime>05/30/2015 17:57:45</publishTime>
+    </File>
+    <File Include="Views/Changes/_errorMessage.cshtml">
+      <publishTime>08/20/2015 17:58:31</publishTime>
+    </File>
+    <File Include="Views/Changes/_successMessage.cshtml">
+      <publishTime>08/20/2015 17:58:31</publishTime>
+    </File>
+    <File Include="Views/Changes/_TicketDetailsPartial.cshtml">
+      <publishTime>05/29/2015 11:23:10</publishTime>
+    </File>
+    <File Include="Views/Client/AddTeam.cshtml">
+      <publishTime>05/30/2015 18:56:15</publishTime>
+    </File>
+    <File Include="Views/Client/DefineClient.cshtml">
+      <publishTime>01/21/2016 18:09:08</publishTime>
+    </File>
+    <File Include="Views/Client/DefineClientTeamMap.cshtml">
+      <publishTime>07/15/2015 14:56:28</publishTime>
+    </File>
+    <File Include="Views/Client/DefineClientUserMap.cshtml">
+      <publishTime>05/29/2015 11:23:09</publishTime>
+    </File>
+    <File Include="Views/Client/DefineGroup.cshtml">
+      <publishTime>04/05/2015 12:46:06</publishTime>
+    </File>
+    <File Include="Views/Client/DefineGroupClientMap.cshtml">
+      <publishTime>08/05/2015 19:33:16</publishTime>
+    </File>
+    <File Include="Views/Client/DefineTeamClientMap.cshtml">
+      <publishTime>07/15/2015 14:53:53</publishTime>
+    </File>
+    <File Include="Views/Client/DefineTeamUserMap.cshtml">
+      <publishTime>07/15/2015 15:10:24</publishTime>
+    </File>
+    <File Include="Views/Client/DefineTeamUserModuleMap.cshtml">
+      <publishTime>08/20/2015 16:18:49</publishTime>
+    </File>
+    <File Include="Views/Client/DefineUserClientMap.cshtml">
+      <publishTime>05/30/2015 21:04:50</publishTime>
+    </File>
+    <File Include="Views/Client/DefineUserClientMapTeam.cshtml">
+      <publishTime>05/30/2015 21:04:56</publishTime>
+    </File>
+    <File Include="Views/Client/List.cshtml">
+      <publishTime>07/23/2015 20:10:51</publishTime>
+    </File>
+    <File Include="Views/Client/MapClientDetailsPartialClient.cshtml">
+      <publishTime>05/16/2015 18:13:18</publishTime>
+    </File>
+    <File Include="Views/Client/MapClientDetailsPartialClientRemove.cshtml">
+      <publishTime>05/18/2015 10:39:56</publishTime>
+    </File>
+    <File Include="Views/Client/MultichosenClientGroupPop.cshtml">
+      <publishTime>08/05/2015 19:33:10</publishTime>
+    </File>
+    <File Include="Views/Client/MultichosenClientTeamPop.cshtml">
+      <publishTime>06/01/2015 20:08:29</publishTime>
+    </File>
+    <File Include="Views/Client/MultichosenClientTeamPopRemove.cshtml">
+      <publishTime>06/01/2015 20:08:29</publishTime>
+    </File>
+    <File Include="Views/Client/MultichosenClientUserPop.cshtml">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Views/Client/MultichosenClientUserPopRemove.cshtml">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Views/Client/MultichosenTeamClientPop.cshtml">
+      <publishTime>06/01/2015 20:15:44</publishTime>
+    </File>
+    <File Include="Views/Client/MultichosenTeamClientPopRemove.cshtml">
+      <publishTime>06/01/2015 20:08:29</publishTime>
+    </File>
+    <File Include="Views/Client/MultichosenTeamUserPop.cshtml">
+      <publishTime>06/01/2015 20:08:29</publishTime>
+    </File>
+    <File Include="Views/Client/MultichosenTeamUserPopRemove.cshtml">
+      <publishTime>06/01/2015 20:08:29</publishTime>
+    </File>
+    <File Include="Views/Client/MultichosenUserClientPop.cshtml">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Views/Client/MultichosenUserClientPopRemove.cshtml">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Views/Client/MultichosenUserClientPopTeam.cshtml">
+      <publishTime>05/29/2015 11:23:09</publishTime>
+    </File>
+    <File Include="Views/Client/MultichosenUserClientPopTeamRemove.cshtml">
+      <publishTime>05/29/2015 11:23:09</publishTime>
+    </File>
+    <File Include="Views/Client/PartialClientTeamMap.cshtml">
+      <publishTime>05/18/2015 16:09:54</publishTime>
+    </File>
+    <File Include="Views/Client/PartialClientUserMap.cshtml">
+      <publishTime>05/16/2015 18:21:30</publishTime>
+    </File>
+    <File Include="Views/Client/PartialGroupClientMap.cshtml">
+      <publishTime>05/07/2015 18:06:08</publishTime>
+    </File>
+    <File Include="Views/Client/PartialTeamClientMap.cshtml">
+      <publishTime>06/01/2015 19:49:20</publishTime>
+    </File>
+    <File Include="Views/Client/PartialTeamUserMap.cshtml">
+      <publishTime>05/28/2015 09:57:09</publishTime>
+    </File>
+    <File Include="Views/Client/PartialTeamUserModuleMap.cshtml">
+      <publishTime>06/11/2015 12:04:40</publishTime>
+    </File>
+    <File Include="Views/Client/PartialUserClientMap.cshtml">
+      <publishTime>05/28/2015 13:38:17</publishTime>
+    </File>
+    <File Include="Views/Client/PartialUserClientMapTeam.cshtml">
+      <publishTime>05/15/2015 19:38:39</publishTime>
+    </File>
+    <File Include="Views/Client/_ClientDetailsPartial.cshtml">
+      <publishTime>05/15/2015 20:05:44</publishTime>
+    </File>
+    <File Include="Views/Client/_errorMessage.cshtml">
+      <publishTime>06/01/2015 13:01:21</publishTime>
+    </File>
+    <File Include="Views/Client/_getOnlyModule.cshtml">
+      <publishTime>05/28/2015 17:49:19</publishTime>
+    </File>
+    <File Include="Views/Client/_MapClientDetailsPartial.cshtml">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Views/Client/_MapClientDetailsPartialTeam.cshtml">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Views/Client/_MapClientDetailsPartialTeamRemove.cshtml">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Views/Client/_MapClientDetailsPartialUser.cshtml">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Views/Client/_MapClientDetailsPartialUserRemove.cshtml">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Views/Client/_successMessage.cshtml">
+      <publishTime>05/30/2015 20:35:29</publishTime>
+    </File>
+    <File Include="Views/Dashboard/AddTicket.cshtml">
+      <publishTime>05/29/2015 11:23:09</publishTime>
+    </File>
+    <File Include="Views/Dashboard/Copy of List.cshtml">
+      <publishTime>06/01/2015 20:08:29</publishTime>
+    </File>
+    <File Include="Views/Dashboard/Dashboard.cshtml">
+      <publishTime>03/21/2016 15:51:13</publishTime>
+    </File>
+    <File Include="Views/Dashboard/DefineGroup.cshtml">
+      <publishTime>04/27/2015 11:32:10</publishTime>
+    </File>
+    <File Include="Views/Dashboard/DefineUser.cshtml">
+      <publishTime>04/27/2015 11:32:10</publishTime>
+    </File>
+    <File Include="Views/Dashboard/List.cshtml">
+      <publishTime>05/29/2015 11:23:10</publishTime>
+    </File>
+    <File Include="Views/Dashboard/TicketDetails.cshtml">
+      <publishTime>04/27/2015 11:32:10</publishTime>
+    </File>
+    <File Include="Views/Dashboard/_TicketDetailsPartial.cshtml">
+      <publishTime>06/04/2015 11:57:02</publishTime>
+    </File>
+    <File Include="Views/DeskReports/CustomerValidity.cshtml">
+      <publishTime>09/10/2015 19:35:07</publishTime>
+    </File>
+    <File Include="Views/DeskReports/DayWiseEmpWise.cshtml">
+      <publishTime>06/19/2015 13:04:25</publishTime>
+    </File>
+    <File Include="Views/DeskReports/Define.cshtml">
+      <publishTime>07/04/2015 11:38:27</publishTime>
+    </File>
+    <File Include="Views/DeskReports/EmpWiseEngagement.cshtml">
+      <publishTime>09/04/2015 12:23:34</publishTime>
+    </File>
+    <File Include="Views/DeskReports/EmpWiseStatus.cshtml">
+      <publishTime>09/04/2015 12:23:41</publishTime>
+    </File>
+    <File Include="Views/DeskReports/EmpWiseTicket.cshtml">
+      <publishTime>09/10/2015 18:52:57</publishTime>
+    </File>
+    <File Include="Views/DeskReports/IssueSummaryDetails.cshtml">
+      <publishTime>07/23/2015 20:25:42</publishTime>
+    </File>
+    <File Include="Views/DeskReports/JobPendingList.cshtml">
+      <publishTime>07/23/2015 20:24:23</publishTime>
+    </File>
+    <File Include="Views/DeskReports/MultichosenSelectTicketPop.cshtml">
+      <publishTime>06/19/2015 13:04:25</publishTime>
+    </File>
+    <File Include="Views/DeskReports/PartialDayEmpWise.cshtml">
+      <publishTime>06/17/2015 12:46:38</publishTime>
+    </File>
+    <File Include="Views/DeskReports/PartialEmpWiseEngagement.cshtml">
+      <publishTime>09/04/2015 12:23:41</publishTime>
+    </File>
+    <File Include="Views/DeskReports/PartialTicket.cshtml">
+      <publishTime>06/17/2015 10:05:56</publishTime>
+    </File>
+    <File Include="Views/DeskReports/PartialTicketTree.cshtml">
+      <publishTime>06/16/2015 12:37:48</publishTime>
+    </File>
+    <File Include="Views/DeskReports/Ticketdetails.cshtml">
+      <publishTime>07/15/2015 15:20:46</publishTime>
+    </File>
+    <File Include="Views/DeskReports/UserList.cshtml">
+      <publishTime>07/23/2015 20:20:26</publishTime>
+    </File>
+    <File Include="Views/Group/DefineGroup.cshtml">
+      <publishTime>05/29/2015 11:23:10</publishTime>
+    </File>
+    <File Include="Views/Group/List.cshtml">
+      <publishTime>05/29/2015 11:23:10</publishTime>
+    </File>
+    <File Include="Views/Group/TicketDetails.cshtml">
+      <publishTime>04/27/2015 11:28:46</publishTime>
+    </File>
+    <File Include="Views/Group/_TicketDetailsPartial.cshtml">
+      <publishTime>04/27/2015 11:28:46</publishTime>
+    </File>
+    <File Include="Views/Home/ForgotPassword.cshtml">
+      <publishTime>06/16/2015 18:57:29</publishTime>
+    </File>
+    <File Include="Views/Home/Index.cshtml">
+      <publishTime>06/16/2015 19:05:44</publishTime>
+    </File>
+    <File Include="Views/News/Define.cshtml">
+      <publishTime>07/28/2015 12:00:48</publishTime>
+    </File>
+    <File Include="Views/News/List.cshtml">
+      <publishTime>07/28/2015 17:59:25</publishTime>
+    </File>
+    <File Include="Views/News/TicketDetails.cshtml">
+      <publishTime>07/28/2015 16:41:55</publishTime>
+    </File>
+    <File Include="Views/News/_AjaxFilter.cshtml">
+      <publishTime>08/10/2015 20:03:35</publishTime>
+    </File>
+    <File Include="Views/News/_AjaxListBody.cshtml">
+      <publishTime>08/11/2015 12:09:41</publishTime>
+    </File>
+    <File Include="Views/Release/AddTicket.cshtml">
+      <publishTime>08/11/2015 14:52:22</publishTime>
+    </File>
+    <File Include="Views/Release/Approval.cshtml">
+      <publishTime>07/23/2015 16:48:51</publishTime>
+    </File>
+    <File Include="Views/Release/AssignTodeveloper.cshtml">
+      <publishTime>07/23/2015 16:48:51</publishTime>
+    </File>
+    <File Include="Views/Release/Category.cshtml">
+      <publishTime>07/23/2015 16:48:51</publishTime>
+    </File>
+    <File Include="Views/Release/ChangePickup.cshtml">
+      <publishTime>07/23/2015 16:48:51</publishTime>
+    </File>
+    <File Include="Views/Release/ChangePriority.cshtml">
+      <publishTime>07/23/2015 16:48:51</publishTime>
+    </File>
+    <File Include="Views/Release/ChangeStatus.cshtml">
+      <publishTime>07/23/2015 16:48:51</publishTime>
+    </File>
+    <File Include="Views/Release/ClientList.cshtml">
+      <publishTime>07/23/2015 16:48:51</publishTime>
+    </File>
+    <File Include="Views/Release/Close.cshtml">
+      <publishTime>07/23/2015 16:48:51</publishTime>
+    </File>
+    <File Include="Views/Release/Copy of List.cshtml">
+      <publishTime>07/23/2015 16:48:51</publishTime>
+    </File>
+    <File Include="Views/Release/Dashboard.cshtml">
+      <publishTime>07/23/2015 16:48:51</publishTime>
+    </File>
+    <File Include="Views/Release/DefineGroup.cshtml">
+      <publishTime>07/23/2015 16:48:51</publishTime>
+    </File>
+    <File Include="Views/Release/GetDiscussionList.cshtml">
+      <publishTime>09/16/2015 12:08:03</publishTime>
+    </File>
+    <File Include="Views/Release/List.cshtml">
+      <publishTime>07/28/2015 17:58:01</publishTime>
+    </File>
+    <File Include="Views/Release/ModuleList.cshtml">
+      <publishTime>07/23/2015 16:48:51</publishTime>
+    </File>
+    <File Include="Views/Release/SqlFilter.cshtml">
+      <publishTime>07/23/2015 16:48:51</publishTime>
+    </File>
+    <File Include="Views/Release/TicketDetails.cshtml">
+      <publishTime>07/28/2015 16:13:26</publishTime>
+    </File>
+    <File Include="Views/Release/_AjaxAddTicketForm.cshtml">
+      <publishTime>07/23/2015 16:48:51</publishTime>
+    </File>
+    <File Include="Views/Release/_AjaxCommentBody.cshtml">
+      <publishTime>07/23/2015 16:48:51</publishTime>
+    </File>
+    <File Include="Views/Release/_AjaxFilter.cshtml">
+      <publishTime>08/10/2015 20:02:20</publishTime>
+    </File>
+    <File Include="Views/Release/_AjaxListBody.cshtml">
+      <publishTime>08/11/2015 15:02:36</publishTime>
+    </File>
+    <File Include="Views/Release/_AjaxProduct.cshtml">
+      <publishTime>07/23/2015 16:48:51</publishTime>
+    </File>
+    <File Include="Views/Release/_AjaxShowClientDetails.cshtml">
+      <publishTime>07/23/2015 16:48:51</publishTime>
+    </File>
+    <File Include="Views/Release/_AjaxStatus.cshtml">
+      <publishTime>07/23/2015 16:48:51</publishTime>
+    </File>
+    <File Include="Views/Release/_Blank.cshtml">
+      <publishTime>07/23/2015 16:48:51</publishTime>
+    </File>
+    <File Include="Views/Release/_TicketDetailsPartial.cshtml">
+      <publishTime>07/23/2015 16:48:51</publishTime>
+    </File>
+    <File Include="Views/Reports/DayWiseEmpWise.cshtml">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Views/Reports/Define.cshtml">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Views/Reports/IssueSummaryDetails.cshtml">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Views/Reports/JobPendingList.cshtml">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Views/Reports/MultichosenSelectTicketPop.cshtml">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Views/Reports/PartialDayEmpWise.cshtml">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Views/Reports/PartialTicket.cshtml">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Views/Reports/PartialTicketTree.cshtml">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Views/Reports/Ticketdetails.cshtml">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Views/Reports/UserList.cshtml">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Views/Setup/addfield.vm">
+      <publishTime>01/13/2015 15:42:54</publishTime>
+    </File>
+    <File Include="Views/Setup/addsection.vm">
+      <publishTime>01/13/2015 16:15:56</publishTime>
+    </File>
+    <File Include="Views/Setup/changeLogo.vm">
+      <publishTime>03/17/2015 16:51:52</publishTime>
+    </File>
+    <File Include="Views/Setup/ChangeModuleList.vm">
+      <publishTime>10/20/2014 11:57:48</publishTime>
+    </File>
+    <File Include="Views/Setup/CreateLayout.cshtml">
+      <publishTime>05/29/2015 11:23:10</publishTime>
+    </File>
+    <File Include="Views/Setup/datatype.vm">
+      <publishTime>02/05/2014 18:21:58</publishTime>
+    </File>
+    <File Include="Views/Setup/DropDownModuleSectionNameChange.vm">
+      <publishTime>06/20/2014 12:03:14</publishTime>
+    </File>
+    <File Include="Views/Setup/getMylayOutList.cshtml">
+      <publishTime>05/29/2015 11:23:10</publishTime>
+    </File>
+    <File Include="Views/Setup/getMyMasterFieldList.cshtml">
+      <publishTime>05/29/2015 11:23:10</publishTime>
+    </File>
+    <File Include="Views/Setup/MasterField.cshtml">
+      <publishTime>06/16/2015 15:13:16</publishTime>
+    </File>
+    <File Include="Views/Setup/PreviewMoudulePartial.cshtml">
+      <publishTime>05/29/2015 11:23:10</publishTime>
+    </File>
+    <File Include="Views/Setup/RoleDefine.cshtml">
+      <publishTime>07/27/2015 17:00:17</publishTime>
+    </File>
+    <File Include="Views/Setup/RoleList.cshtml">
+      <publishTime>07/24/2015 18:42:39</publishTime>
+    </File>
+    <File Include="Views/Setup/_RoleDetailsPartial.cshtml">
+      <publishTime>05/14/2015 16:03:55</publishTime>
+    </File>
+    <File Include="Views/Shared/Error.cshtml">
+      <publishTime>04/18/2015 12:55:24</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.cshtml">
+      <publishTime>03/21/2016 15:59:26</publishTime>
+    </File>
+    <File Include="Views/Shared/_LayoutModal.cshtml">
+      <publishTime>06/17/2015 11:39:44</publishTime>
+    </File>
+    <File Include="Views/Shared/_modalpopup.cshtml">
+      <publishTime>05/04/2015 15:45:26</publishTime>
+    </File>
+    <File Include="Views/Shared/_setupLayout.cshtml">
+      <publishTime>05/04/2015 16:58:04</publishTime>
+    </File>
+    <File Include="Views/SlaPolicy/SLADetailsPartial.cshtml">
+      <publishTime>05/20/2015 09:32:29</publishTime>
+    </File>
+    <File Include="Views/SlaPolicy/SlaPolicy.cshtml">
+      <publishTime>05/30/2015 13:40:37</publishTime>
+    </File>
+    <File Include="Views/SlaPolicy/SlaPolicyList.cshtml">
+      <publishTime>07/23/2015 20:14:25</publishTime>
+    </File>
+    <File Include="Views/Ticket/AddTicket.cshtml">
+      <publishTime>11/18/2015 10:44:09</publishTime>
+    </File>
+    <File Include="Views/Ticket/Approval.cshtml">
+      <publishTime>06/16/2015 19:17:24</publishTime>
+    </File>
+    <File Include="Views/Ticket/AssignTodeveloper.cshtml">
+      <publishTime>08/20/2015 17:57:58</publishTime>
+    </File>
+    <File Include="Views/Ticket/BulkAction.cshtml">
+      <publishTime>05/29/2015 11:23:10</publishTime>
+    </File>
+    <File Include="Views/Ticket/Category.cshtml">
+      <publishTime>06/16/2015 19:16:53</publishTime>
+    </File>
+    <File Include="Views/Ticket/ChangePriority.cshtml">
+      <publishTime>06/16/2015 19:16:47</publishTime>
+    </File>
+    <File Include="Views/Ticket/ChangeStatus.cshtml">
+      <publishTime>03/19/2016 13:19:09</publishTime>
+    </File>
+    <File Include="Views/Ticket/ClientList.cshtml">
+      <publishTime>05/04/2015 12:36:44</publishTime>
+    </File>
+    <File Include="Views/Ticket/Close.cshtml">
+      <publishTime>06/16/2015 19:17:46</publishTime>
+    </File>
+    <File Include="Views/Ticket/CloseCustomer.cshtml">
+      <publishTime>06/16/2015 19:17:54</publishTime>
+    </File>
+    <File Include="Views/Ticket/Copy %282%29 of List.cshtml">
+      <publishTime>05/29/2015 11:23:11</publishTime>
+    </File>
+    <File Include="Views/Ticket/Copy of List.cshtml">
+      <publishTime>05/29/2015 11:23:11</publishTime>
+    </File>
+    <File Include="Views/Ticket/Copy of TicketDetails.cshtml">
+      <publishTime>05/29/2015 11:23:11</publishTime>
+    </File>
+    <File Include="Views/Ticket/Dashboard.cshtml">
+      <publishTime>04/22/2015 20:38:54</publishTime>
+    </File>
+    <File Include="Views/Ticket/DefineGroup.cshtml">
+      <publishTime>04/22/2015 10:36:40</publishTime>
+    </File>
+    <File Include="Views/Ticket/DefineUser.cshtml">
+      <publishTime>04/22/2015 10:36:18</publishTime>
+    </File>
+    <File Include="Views/Ticket/Export.cshtml">
+      <publishTime>06/16/2015 11:29:58</publishTime>
+    </File>
+    <File Include="Views/Ticket/GetDiscussionList.cshtml">
+      <publishTime>06/09/2015 17:43:57</publishTime>
+    </File>
+    <File Include="Views/Ticket/List.cshtml">
+      <publishTime>03/21/2016 16:01:13</publishTime>
+    </File>
+    <File Include="Views/Ticket/ModuleList.cshtml">
+      <publishTime>06/03/2015 13:11:25</publishTime>
+    </File>
+    <File Include="Views/Ticket/SqlFilter.cshtml">
+      <publishTime>06/08/2015 11:55:37</publishTime>
+    </File>
+    <File Include="Views/Ticket/TicketDetails.cshtml">
+      <publishTime>03/19/2016 13:17:51</publishTime>
+    </File>
+    <File Include="Views/Ticket/_AjaxAddTicketForm.cshtml">
+      <publishTime>07/22/2015 16:33:25</publishTime>
+    </File>
+    <File Include="Views/Ticket/_AjaxCommentBody.cshtml">
+      <publishTime>06/15/2015 10:34:16</publishTime>
+    </File>
+    <File Include="Views/Ticket/_AjaxFilter.cshtml">
+      <publishTime>07/15/2015 18:17:40</publishTime>
+    </File>
+    <File Include="Views/Ticket/_AjaxListBody.cshtml">
+      <publishTime>03/19/2016 11:36:25</publishTime>
+    </File>
+    <File Include="Views/Ticket/_AjaxProduct.cshtml">
+      <publishTime>06/03/2015 13:13:21</publishTime>
+    </File>
+    <File Include="Views/Ticket/_AjaxShowClientDetails.cshtml">
+      <publishTime>11/18/2015 10:23:16</publishTime>
+    </File>
+    <File Include="Views/Ticket/_AjaxStatus.cshtml">
+      <publishTime>05/29/2015 11:23:10</publishTime>
+    </File>
+    <File Include="Views/Ticket/_Blank.cshtml">
+      <publishTime>05/30/2015 17:57:45</publishTime>
+    </File>
+    <File Include="Views/Ticket/_category.cshtml">
+      <publishTime>05/29/2015 20:43:54</publishTime>
+    </File>
+    <File Include="Views/Ticket/_errorMessage.cshtml">
+      <publishTime>08/20/2015 15:36:32</publishTime>
+    </File>
+    <File Include="Views/Ticket/_successMessage.cshtml">
+      <publishTime>08/20/2015 15:36:38</publishTime>
+    </File>
+    <File Include="Views/Ticket/_TicketDetailsPartial.cshtml">
+      <publishTime>05/29/2015 11:23:10</publishTime>
+    </File>
+    <File Include="Views/User/ChangePassword.cshtml">
+      <publishTime>06/16/2015 17:56:44</publishTime>
+    </File>
+    <File Include="Views/User/Copy of List.cshtml">
+      <publishTime>05/29/2015 11:23:11</publishTime>
+    </File>
+    <File Include="Views/User/DefineUser.cshtml">
+      <publishTime>11/09/2016 11:48:24</publishTime>
+    </File>
+    <File Include="Views/User/List.cshtml">
+      <publishTime>09/07/2015 15:30:27</publishTime>
+    </File>
+    <File Include="Views/User/Profile.cshtml">
+      <publishTime>06/02/2015 14:30:18</publishTime>
+    </File>
+    <File Include="Views/User/ProfileEdit.cshtml">
+      <publishTime>06/16/2015 17:54:08</publishTime>
+    </File>
+    <File Include="Views/User/TicketDetails.cshtml">
+      <publishTime>04/27/2015 11:05:38</publishTime>
+    </File>
+    <File Include="Views/User/_Blank.cshtml">
+      <publishTime>05/14/2015 15:11:49</publishTime>
+    </File>
+    <File Include="Views/User/_Failure.cshtml">
+      <publishTime>05/14/2015 15:11:50</publishTime>
+    </File>
+    <File Include="Views/User/_UserDetailsPartial.cshtml">
+      <publishTime>05/12/2015 18:39:47</publishTime>
+    </File>
+    <File Include="Views/Web.config">
+      <publishTime>05/29/2015 11:29:50</publishTime>
+    </File>
+    <File Include="Views/_ViewStart.cshtml">
+      <publishTime>05/29/2015 14:41:11</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>11/09/2016 12:11:22</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

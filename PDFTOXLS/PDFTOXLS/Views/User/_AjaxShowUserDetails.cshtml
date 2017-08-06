@@ -1,0 +1,224 @@
+﻿@using MvcApplication1.Models;
+@{
+    List<TickitListView> _mdfld = (List<TickitListView>)ViewBag.TickitSourceLists;
+}
+<div class="sidebar topbtmpadding rightcol">
+ 
+
+@*<hr class="style-two" />*@
+       @if (_mdfld != null && _mdfld.Count()>0)
+        {
+<h2 class="font-md paddingbottom5">Recently assigned tickets </h2>
+@*<hr class="style-two" />*@
+
+            <div class="clearfix" id="ShowProductLeftPanel">
+                <div id="tickets-expanded" class="clearfix" style="margin-top:5px;">
+              <div id="ticket-list-body" class="clearfix">
+<div id="ticket-list-body-content">
+    <div data-menu-hover-in="tr" id="ticket-list" class="detailed_view">
+                   <table class="tickets" style="width:100%;">	
+    <tbody >
+      <!-- Write in single line for template_liner to work..-->
+     
+          @foreach (TickitListView _item in _mdfld)
+          {
+        
+        <tr>
+   @if (@_item.Priority_1 == "Low")
+   {
+  <td class="priority-border priority-low"></td>
+   }
+   else if (@_item.Priority_1 == "Normal")
+   {
+ <td class="priority-border priority-medium"></td>
+   }
+   else if (@_item.Priority_1 == "High")
+   {
+ <td class="priority-border priority-high"></td>
+   }
+   else if (@_item.Priority_1 == "Urgent")
+   {
+        <td class="priority-border priority-urgent"></td>
+   }
+   
+<td>
+    <div class="row">
+        <div class="col-xs-12">
+             <table style="width:100%;">
+                <tr>
+                    <td class="name" style="padding-left:0px;border-bottom:none;">
+    <div class="ticket_subject">
+		<span class="sc-item-cursor priority-border  priority-low shorcuts-info"></span>
+		<h3 class="ticket-description-tip new_ticket" data-tip-url="#">
+			<a href="TicketDetails?TicketId=@_item.Id" data-pjax="#body-container"><span class="ticket_id"> #@_item.TicketNo</span> - @_item.IssueSummary </a>
+				
+		</h3>
+
+			<div class="info-data hideForList">				
+				<div class="information ellipsis">
+					Client: @*<a class="user_name" href="#" target="_blank" data-pjax="#body-container">*@
+          <span class="emphasize"><label>@_item.Client_1</label></span>, Created By :
+                        @* <a class="user_name" href="#" target="_blank" data-pjax="#body-container">*@
+          <span class="emphasize">@_item.CreatedUser</span>
+             
+             
+
+      @* </a>*@
+					
+				</div>
+				<div class="emphasize">
+                     @if (@_item.Recordmod != 3 && @_item.Recordmod != 10)
+                     {
+                          
+					<span>Created: </span><span class="emphasize"><label class="createtime" title="@_item.DateCreated" /></span>
+                      }else{
+                     <span> Closed:</span><span class="emphasize"><label class="createtime" title="@_item.DateCreated" /></span>
+                      }
+					 &nbsp
+                     @if (@_item.Recordmod == 11 || @_item.Recordmod == 2)
+                     {
+                         <span>, @_item.STATUS </span>
+                     <span class="emphasize"><label class="fortime" title="@_item.LastStatusUpdate"  /></span>
+                     }
+                     else if (@_item.Recordmod == 3 || @_item.Recordmod == 10)
+                     {
+                        <span class="emphasize">, Resolved in time</span> 
+                     }else{
+                         
+                        <span class="emphasize">, <label class="timeago" title="@_item.Duedate"  /></span>
+                     }
+				</div>
+			</div>
+	</div>
+                        </td>
+                    </tr>
+                 </table>
+            </div>
+</div>
+    <div class="row" style="display:none;">
+        <div class="col-xs-12">
+            <table style="width:100%;">
+                <tr>
+                    <td class=" hideForList" style="width:50%;">
+      @if(@_item.Recordmod==12)
+      {
+		<span class="new subject_style" data-original-title="" data-placement="left"><span class="">
+
+		   </span>New</span>
+      }
+      else if (@_item.Recordmod == 1)
+      {
+          <span class="new subject_style" data-original-title="" data-placement="left"><span class="">
+
+		   </span>Open</span>
+          
+      }
+      else if (@_item.Recordmod == 2)
+      {
+          <span class="new subject_style" data-original-title="" data-placement="left"><span class="">
+
+		   </span>Waiting for Query</span>
+          
+      }
+      else if (@_item.Recordmod == 3)
+      {
+          <span class="new subject_style" data-original-title="" data-placement="left"><span class="">
+
+		   </span>Close</span>
+          
+      } 
+      else if (@_item.Recordmod == 4)
+      {
+          <span class="new subject_style" data-original-title="" data-placement="left"><span class="">
+
+		   </span>Re-Open</span>
+          
+      } 
+        else if (@_item.Recordmod == 5)
+      {
+          <span class="new subject_style" data-original-title="" data-placement="left"><span class="">
+
+		   </span>Working</span>
+          
+      } 
+       else if (@_item.Recordmod == 6)
+      {
+          <span class="new subject_style" data-original-title="" data-placement="left"><span class="">
+
+		   </span>Paused</span>
+          
+      } 
+       else if (@_item.Recordmod ==7)
+      {
+          <span class="new subject_style" data-original-title="" data-placement="left"><span class="">
+
+		   </span>Resolved</span>
+          
+      } 
+       else if (@_item.Recordmod ==8)
+      {
+          <span class="new subject_style" data-original-title="" data-placement="left"><span class="">
+
+		   </span>Approved</span>
+          
+      } 
+       else if (@_item.Recordmod ==9)
+      {
+          <span class="new subject_style" data-original-title="" data-placement="left"><span class="">
+
+		   </span>Assigned</span>
+          
+      } 
+       else if (@_item.Recordmod ==10)
+      {
+          <span class="new subject_style" data-original-title="" data-placement="left"><span class="">
+
+		   </span>Resolved & Close</span>
+          
+      } 
+      else if (@_item.Recordmod ==11)
+      {
+          <span class="new subject_style" data-original-title="" data-placement="left"><span class="">
+
+		   </span>Waiting for Customer</span>
+          
+      } 
+       else if (@_item.Recordmod ==13)
+      {
+          <span class="new subject_style" data-original-title="" data-placement="left"><span class="">
+
+		   </span>Customer Replied</span>
+          
+      } 
+	</td>
+                    <td style="width:50%;"><label>Agent: </label>
+					<span class="result dropdown-toggle"  role="button">@_item.Agent</span></td>
+                </tr>
+                <tr>
+                    <td><label>Status: </label>
+				<span class="result dropdown-toggle" data-toggle="dropdown" role="button">@_item.STATUS</span></td>
+                    <td><label>Priority: </label>
+				<span class="result dropdown-toggle" data-toggle="dropdown" role="button">@_item.Priority_1</span></td>
+                </tr>
+            </table>
+            </div>
+        </div>
+</td>
+
+
+</tr>
+
+          }
+        
+       
+      
+   
+    </tbody>
+  </table>
+        </div>
+    </div>
+                  </div>
+                    </div>
+               </div>
+    }
+          </div>

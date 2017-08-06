@@ -1,0 +1,88 @@
+﻿@using PDFTOXLS.Models;
+
+@{
+                    //List<ModuleSection> _Section = (List < ModuleSection >)ViewBag.moduleSection;
+}
+
+@{
+                    //List<MasterFields> _modulefileds = (List<MasterFields>)ViewBag.moduleField;
+}
+
+
+@*@foreach (var _modulesection in _Section)
+                                                                            {
+                                                                                   
+                                                                                *@
+@*<div id="gallery21" class="gallery2">
+    <h2 class="font-sm"@_modulesection.Name</h2>*@
+
+    <div id="gallery2" class="gallery2 col-xs-12">
+        <div class="galleryrow">
+            <ul id="sortable_1" class="gallery2 clearfix">
+                <input type="hidden" name="sortlist[]" id="sortlist_1">
+                <!-- Gallery Items [start] -->
+
+                @foreach (ModuleFieldsView _moduleflds in Model)
+                {
+                    //var k=0;
+                    var css = (_moduleflds.IsRemovable == false) ? "checked" : " ";
+                                                                                      
+                    <script language="javascript" type="text/javascript">
+                        $(function () {
+
+                            $("#sortable_1").sortable({
+                                placeholder: "ui-state-highlight",
+                                update: function () {
+                                    var order = $(this).sortable("toArray");
+                                    $("#sortlist_1").val(order);
+                                }
+                            });
+
+                            $("ul, li").disableSelection();
+                        });
+                    </script>
+                                                                                           
+                    //if (_moduleflds.modulesection == _modulesection)
+                    //{
+                    <li class="" id="sec1_1 @_moduleflds.ID">
+                        <div class="gallerybox clearfix">
+                            <div class="ajaxselectpicklist pull-left" style="margin-top: 0px;">
+                               @* <input type="checkbox" class="tip-left" title="Mandatory Field" disabled="disabled" name="ismandatory[]" onchange="javascript:updateMandFieldApps();" value="" />*@
+
+                                <span>@_moduleflds.Caption  <em class="formee-req">*</em> </span>
+
+                                <span><a href="#CreateLayout=Define"  onclick="javascript:EditField'@_moduleflds.ID','$ModuleObjName');" title="Edit _moduleflds.Caption Field"  rel="fullwidthboard">
+                                    <img src="~/Content/Images/edit.png" alt="Edit"></a><br class="clear" />
+                                </span>
+
+                            </div>
+                            <div class="pull-right">
+                                <input type="text" class="tip-left" title="Mandatory Field" value="@_moduleflds.columnWidth" name="nm_columnWidth[]" onchange="javascript:updateColumnWidth();" style="width: 80px;" />
+                                <input type="checkbox" title="Show in Grid" class="tip-left" value=""  @css   onchange="javascript:updateIshowinglist();"  name="isShowingInListing[]" />
+
+                               @* onchange="javascript:updatecolumnWidth();" *@
+                                @* <input type="checkbox"  class="tip-left" title="Quick  $!ModuleName" value=""  checked="checked"   disabled="disabled"   name="isQuickLead[]" onchange="javascript:updateIsQuickLead();" id="@_moduleflds.ID"  />
+                                                                                   
+                                                                                        <input type="checkbox"  class="tip-left" title="Visibility" value=""  checked="checked" disabled="disabled"    name="Isremovale[]" onchange="javascript:updateFieldApps();" id="@_moduleflds.ID"  />
+                                                                                        <input type="checkbox"  class="tip-left" title="Remove from The List" name="isremoveFromList[]" disabled="disabled"   onchange="javascript:RemoveFromList();" id="rem_ @_moduleflds.ID" />*@
+                            </div>
+                            <input type="hidden" name="fieldid[]" id="fieldid[]" value="@_moduleflds.ID" />
+                            <input type="hidden" name="Masterfieldid[]" id="Masterfieldid[]" value="@_moduleflds.MasterFieldId" />
+                             
+                        </div>
+                    </li>
+                    //}
+                    //k = k + 1;
+                }
+            </ul>
+        </div>
+    </div>
+    <input type="hidden" name="isShowingInGridList" id="isShowingInGridList" value="" />
+    <input type="hidden" name="isquickleadfld" id="isquickleadfld" value="" />
+    <input type="hidden" name="rmvfld" id="rmvfld" value="" />
+    <input type="hidden" name="mnadatory" id="mnadatory" value="" />
+    <input type="hidden" name="isremovedFromList" id="isremovedFromList" value="" />
+   <input type="hidden" name="columnWidth[]" id="columnWidth" value="" />
+
+
+@*  }*@

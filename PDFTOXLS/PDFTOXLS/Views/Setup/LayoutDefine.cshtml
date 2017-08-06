@@ -1,0 +1,245 @@
+
+<div class="row">
+
+        <div class="col-sm-12 col-md-12 col-xs-12">
+            
+  <div class="col-xs-12 clearfix">
+      <div class="topbtmpadding clearfix">
+          <div class="clearfix">
+          <h2 class="font-md  pull-left">Module Manager</h2>
+         @* <a class="btn btn-xs btn-primary pull-right" href="@Url.Action("CreateLayout", "Setup")">Create layout</a>*@
+</div>
+
+          <div class="col-xs-12">
+    <p>Customize the page layout by changing the order of the columns and fields, marking fields as mandatory, adding or removing the fields and sections. You can drag and drop the section header to reorder the sections. You need to drag and drop the fields to move them to the List of Removed Fields.</p>
+</div>
+
+          <form  method="post" action="/Setup/updateFieldApps"  id="validate-form" style="margin-bottom: 0px !important;">
+
+            
+          <div class="col-xs-6">
+
+              <div class="form-group">
+    <label>Choose Module:</label>
+    
+      <select name="changeList" id="changeList" class="form-control input-sm"  onchange = "getMylayOutList();" >
+                                                  <option value="">Select One</option>
+                                                <option value="DEF_TICKET">Ticket</option>
+                                                                                          
+                                                    <!--<option  value="MyLead">My Call</option>-->
+    									        </select>
+    
+  </div>
+
+              
+                                                                        </div>
+
+ @*
+                                                                        <div class="col-xs-6">
+                                                                            <div class="form-group">
+    <label>Choose Layout:</label>
+    
+     @Html.DropDownList("MylayoutID", (IEnumerable<SelectListItem>)ViewBag.Mylayout, null, new { @class="form-control input-sm" ,onchange = "getMylayOutList();" })
+     <a id="addfldId" class="btn btn-xs btn-default"  href="#CreateLayout=addfield=modId=DEF_LEAD"  onclick="javascript:OnlyLoadPage('$Url.For("%{controller='CreateLayout', action='addfield',querystring='modId=DEF_LEAD'}")');">Add Field</a>
+                                                                        <a id="addSecId" class="btn btn-xs btn-default" href="#CreateLayout=addsection=modId=DEF_LEAD" onclick="javascript:OnlyLoadPage('$Url.For("%{controller='CreateLayout', action='addsection',querystring='modId=DEF_LEAD'}")');"><i class="fa fa-plus-circle"></i>&nbsp; Add Section</a>
+  </div>
+
+                                                                          
+                                                                              
+                                                                      
+                                                                        </div>*@
+
+                                                                                  <div class="col-xs-12 paddingtop15">
+
+                                                                        <div id="ChangeMod">
+                                                                              
+                                                                              </div>
+              </div>
+
+
+
+          <div class="col-xs-12">
+              <input type="submit" class="btn btn-xs btn-primary" onclick="javascript: allfunction();" name="btnSubmit" value="Update" />
+              @*<input type="button" class="btn btn-xs btn-primary" name="SaveButtonType" onclick="javascript:SaveEditAjax('$Url.For("%{controller='CreateLayout',action='updateFieldApps'}")');"  value="Update" />
+              <input type="button" class="btn btn-xs btn-primary" name="SaveButtonType" onclick="javascript:OnlyLoadPage('$Url.For("%{controller='Setup',action='Define'}")');"  value="Cancel" />*@
+           <a class="btn btn-xs btn-primary" onclick="javascript:PreviewDetails()">Preview</a>
+          </div>
+
+          </div>
+   
+      </div>
+            </div>
+    </div>
+</form>
+<div id="previewgrid">
+   @*@Html.Action("PreviewMoudulePartial")*@
+    </div>
+    <script type="text/javascript">
+       
+        //function EditField(mfid,mobj)
+        //{
+        //    new Ajax.Request('$UrlHelper.For("%{controller='CreateLayout',action='editfield'}")',
+        //{
+        //    method: 'post',
+        //    parameters: { MFID : mfid, MOBJ : mobj},  
+        //    onSuccess: AjaxResultx,
+        //    onFailure: AjaxMessage
+        //});
+        //}
+        function getMylayOutList() {
+            if (jQuery("#MylayoutID").val() != "") {
+                $.ajax({
+                    type: "POST",
+                    url: "/Setup/getMylayOutList",
+                    data: { layoutid: jQuery("#MylayoutID").val() },
+                    datatype: "html",
+                    success: function (data) {
+                        //alert(data);
+                        $('#ChangeMod').html('');
+                        $('#ChangeMod').html(data);
+
+                        // getModuleList();
+                    }
+                });
+
+            }
+        
+        }
+        
+        function allfunction() {
+           // getMylayOutList();
+            updateColumnWidth();
+            updateIshowinglist();
+
+        }
+</script>
+<script type="text/javascript">
+    function PreviewDetails()
+    {
+        var chksWidth = document.getElementsByName("nm_columnWidth[]");
+        var pChksWidth = '';
+        for (i = 0, j = 0; i < chksWidth.length; i++) {
+            pChksWidth =pChksWidth + chksWidth[i].value +',';
+        }
+        
+        var chksList = document.getElementsByName("isShowingInListing[]");
+        var pChksList = '';
+        for (i = 0, j = 0; i < chksList.length; i++) {
+            pChksList = pChksList + chksList[i].checked + ',';
+        }
+        
+        var chksfieldid = document.getElementsByName("fieldid[]");
+        var pChksfieldid = '';
+        for (i = 0, j = 0; i < chksfieldid.length; i++) {
+            pChksfieldid = pChksfieldid + chksfieldid[i].value + ',';
+        }
+
+         $.ajax({
+            type: "POST",
+            url: "/Setup/PreviewMoudulePartial", 
+            data: {
+                ShowingInList: pChksList,
+                columnwidth: pChksWidth,
+                ID: pChksfieldid
+                },
+            datatype: "html",
+            success: function (data) {
+                $('#previewgrid').html('');
+                $('#previewgrid').html(data);
+            }
+        });
+    }
+</script>
+
+<script  type="text/javascript">
+    function updateMandFieldApps() {
+        var chks = document.getElementsByName("ismandatory[]");
+        var pChks = new Array();
+        for (i = 0, j = 0; i < chks.length; i++) {
+            //alert(chks[i].checked);
+            pChks[j++] = chks[i].checked;
+
+        }
+        document.getElementById("mnadatory").value = pChks;
+    }
+
+    function RemoveFromList() {
+        var chks = document.getElementsByName("isremoveFromList[]");
+        var pChks = new Array();
+        for (i = 0, j = 0; i < chks.length; i++) {
+            //alert(chks[i].checked);
+            pChks[j++] = chks[i].checked;
+        }
+        document.getElementById("isremovedFromList").value = pChks;
+        
+    }
+
+    function updateIsQuickLead() {
+        var chks = document.getElementsByName("isQuickLead[]");
+        var pChks = new Array();
+        for (i = 0, j = 0; i < chks.length; i++) {
+            //alert(chks[i].checked);
+            pChks[j++] = chks[i].checked;
+
+        }
+        document.getElementById("isquickleadfld").value = pChks;
+    }
+
+
+    function updateIshowinglist() {
+       
+        var chks = document.getElementsByName("isShowingInListing[]");
+        var pChks = new Array();
+        for (i = 0, j = 0; i < chks.length; i++) {
+            //alert(chks[i].checked);
+            pChks[j++] = chks[i].checked;
+        }
+        document.getElementById("isShowingInGridList").value = pChks;
+    }
+
+    function updateColumnWidth() {
+        var chks = document.getElementsByName("nm_columnWidth[]");
+       // alert(chks.length);
+        var pChks = new Array();
+        for (i = 0, j = 0; i < chks.length; i++) {
+           // alert(chks[i].value);
+            pChks[j++] = chks[i].value;
+        }
+        document.getElementById("columnWidth").value = pChks;
+    }
+
+    function updateFieldApps() {
+        var chks = document.getElementsByName("Isremovale[]");
+        var pChks = new Array();
+        for (i = 0, j = 0; i < chks.length; i++) {
+            //alert(chks[i].checked);
+            pChks[j++] = chks[i].checked;
+        }
+        document.getElementById("rmvfld").value = pChks;
+        //             var srNo = document.getElementsByName("txt_srno[]");
+        //            var psrNo = new Array();
+        //            for(i=0,j=0; i<srNo.length; i++)    {
+        //                    psrNo[j++] = srNo[i].value;
+        //             
+        //            }
+        //            new Ajax.Request('$UrlHelper.For("%{controller='CreateLayout',action='updateFieldApps'}")',
+        //                {
+        //                    method: 'get',
+        //                    parameters: { chkApp: pChks,FieldIdarr:pfldid ,SR_no:psrNo},
+        //                      onSuccess: showDelResult,
+        //                      onFailure: showDelMessage
+        //                 });
+    }
+
+    function showDelResult(transport) {
+        document.getElementById('showme').style.display = 'block';
+        alert("Successfully Updated");
+    }
+    function showDelMessage(transport) {
+        alert("Error !!");
+        //alert(transport.responseText);
+    }
+</script>
+
+
+    

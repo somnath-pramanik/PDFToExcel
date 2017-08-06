@@ -1,0 +1,105 @@
+@{
+    var grid = Html.DevExpress().GridView(settings =>
+    {
+        settings.Name = "Ticket List";
+        settings.CallbackRouteValues = new { Controller = "Ticket", Action = "TicketDetailsPartial" };
+        
+        settings.SettingsEditing.AddNewRowRouteValues = new { Controller = "Ticket", Action = "AddTicket" };
+        settings.SettingsEditing.UpdateRowRouteValues = new { Controller = "Ticket", Action = "TicketDetailsPartialUpdate" };
+        settings.SettingsEditing.DeleteRowRouteValues = new { Controller = "Ticket", Action = "TicketDetailsPartialDelete" };
+        settings.SettingsEditing.Mode = GridViewEditingMode.EditFormAndDisplayRow;
+        settings.SettingsBehavior.ConfirmDelete = true;
+
+        settings.CommandColumn.Visible = false;
+        settings.CommandColumn.ShowNewButton = false;
+        settings.CommandColumn.ShowDeleteButton = false;
+        settings.CommandColumn.ShowEditButton = false;
+        settings.Settings.ShowHeaderFilterButton = true;
+        
+        settings.KeyFieldName = "Id";
+        settings.Columns.Add(column =>
+        {
+            column.Caption = "Action";
+            column.SetDataItemTemplateContent(c =>
+            {
+                ViewContext.Writer.Write(
+                    Html.ActionLink("Edit", "Modify", new { Id = DataBinder.Eval(c.DataItem, "Id") }) + "&nbsp;" +
+                    Html.ActionLink("Delete", "Delete", new { Id = DataBinder.Eval(c.DataItem, "Id") },
+                        new { onclick = "return confirm('Do you really want to delete this record?')" })
+                );
+            });
+            //column.SetHeaderTemplateContent(c =>
+            //{
+            //    ViewContext.Writer.Write(
+            //        //Html.ActionLink("New", "AddTicket", new { Id = -1 }).ToHtmlString()
+            //        //Html.ActionLink("New", "AddTicket").ToHtmlString()
+            //    );
+            //});
+            column.Settings.AllowDragDrop = DefaultBoolean.False;
+            column.Settings.AllowSort = DefaultBoolean.False;
+            column.Width = 20;
+        });
+        settings.Columns.Add(column =>
+        {
+            column.FieldName = "TASK_NO";
+            column.Caption = "Task No";
+            column.Settings.HeaderFilterMode = HeaderFilterMode.CheckedList;
+        });
+        settings.Columns.Add(column =>
+        {
+            column.FieldName = "REQ_DATE";
+            column.Caption = "Date";
+            column.Settings.HeaderFilterMode = HeaderFilterMode.CheckedList;
+
+            column.ColumnType = MVCxGridViewColumnType.DateEdit;
+            var DatetEdit = column.PropertiesEdit as DateEditProperties;
+            DatetEdit.EditFormat = EditFormat.Custom;
+            DatetEdit.EditFormatString = "dd/MM/yyyy";
+            DatetEdit.DisplayFormatString = "dd/MM/yyyy";
+        });
+
+        settings.Columns.Add(column =>
+        {
+            column.FieldName = "Product";
+            column.Caption = "Product";
+            column.Settings.HeaderFilterMode = HeaderFilterMode.CheckedList;
+        });
+        settings.Columns.Add(column =>
+        {
+            column.FieldName = "Category";
+            column.Caption = "Category";
+            column.Settings.HeaderFilterMode = HeaderFilterMode.CheckedList;
+        });
+        settings.Columns.Add(column =>
+        {
+            column.FieldName = "Version";
+            column.Caption = "Version";
+            column.Settings.HeaderFilterMode = HeaderFilterMode.CheckedList;
+        });
+        settings.Columns.Add(column =>
+        {
+            column.FieldName = "Priority";
+            column.Caption = "Priority";
+            column.Settings.HeaderFilterMode = HeaderFilterMode.CheckedList;
+        });
+
+        settings.SettingsPager.FirstPageButton.Visible = true;
+        settings.SettingsPager.LastPageButton.Visible = true;
+        settings.SettingsPager.PageSizeItemSettings.Visible = true;
+        settings.SettingsPager.PageSizeItemSettings.Items = new string[] { "30", "50", "100" };
+        settings.SettingsPager.PageSize = 30;
+
+        settings.SettingsPager.Visible = true;
+        settings.Settings.ShowGroupPanel = true;
+        settings.Settings.ShowFilterRow = true;
+        settings.SettingsBehavior.AllowSelectByRowClick = true;
+
+    });
+    if (ViewData["EditError"] != null)
+    {
+        grid.SetEditErrorText((string)ViewData["EditError"]);
+        
+        
+    }
+}
+@grid.Bind(Model).GetHtml()

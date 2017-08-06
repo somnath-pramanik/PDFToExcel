@@ -1,0 +1,73 @@
+﻿@using PDFTOXLS.Models;
+
+@{
+                    //List<ModuleSection> _Section = (List < ModuleSection >)ViewBag.moduleSection;
+}
+
+@{
+                    //List<MasterFields> _modulefileds = (List<MasterFields>)ViewBag.moduleField;
+}
+
+
+@*@foreach (var _modulesection in _Section)
+                                                                            {
+                                                                                   
+                                                                                *@
+<div id="gallery2" class="gallery2">
+    <h2 class="font-sm">@*@_modulesection.Name*@</h2>
+
+    <div id="gallery2" class="gallery2 col-xs-12">
+        <div class="galleryrow">
+            <ul id="sortable_" class="gallery2 clearfix">
+                <input type="hidden" name="sortlist[]" id="sortlist_ _moduleflds.Id">
+                <!-- Gallery Items [start] -->
+
+                @foreach (ModuleFieldsView _moduleflds in Model)
+                {
+                    //var k=0;
+                    var IsClient = (_moduleflds.IsRemovable == false) ? "checked" : " ";
+                    //var IsClient= "checked";
+                  
+                    <script language="javascript" type="text/javascript">
+                        $(function () {
+                            $("#sortable_@_moduleflds.ID").sortable({
+                            placeholder: "ui-state-highlight",
+                            update: function () {
+                                var order = $(this).sortable("toArray");
+                                $("#sortlist_@_moduleflds.ID").val(order);
+                                    }
+                                });
+
+                                $("ul, li").disableSelection();
+                            });
+                    </script>
+                    <li class="" id="">
+                        <div class="gallerybox clearfix">
+                            <div class="ajaxselectpicklist pull-left" style="margin-top: 0px;">
+                                <span>@_moduleflds.Caption</span>
+                            </div>
+                            <div class="pull-right">
+                               
+                                <input type="checkbox" title="Is Visible" class="tip-left" onchange="javascript:updateClientVisible();" value="" @IsClient  name="isClientVisible[]" />
+                               @* <input type="checkbox" title="Admin Visible" class="tip-left" onchange ="javascript:updateAdminVisible();" value=""  @IsAdmin  name="isAdminVisible[]" />
+                                <input type="checkbox" title="Manager Visible" class="tip-left"  onchange="javascript:updateManagerVisible();" value="" @IsManager name="isManagerVisible[]" />
+                                <input type="checkbox" title="Member Visible" class="tip-left" onchange="javascript:updateMemberVisible();" value="" @IsMember name="isMemberVisible[]" />*@
+                            </div>
+                            <input type="hidden" name="fieldid[]" id="fieldid[]" value="@_moduleflds.ID" />
+                            <input type="hidden" name="Masterfieldid[]" id="Masterfieldid[]" value="@_moduleflds.FieldListId" />
+                        </div>
+                    </li>
+                }
+            </ul>
+        </div>
+    </div>
+    <input type="hidden" name="isShowingInGridList" id="isShowingInGridList" value="" />
+    <input type="hidden" name="isClientVisible" id="isClientVisible" value="" />
+   @* <input type="hidden" name="isAdminVisible" id="isAdminVisible" value="" />
+    <input type="hidden" name="isManagerVisible" id="isManagerVisible" value="" />
+    <input type="hidden" name="isMemberVisible" id="isMemberVisible" value="" />*@
+
+
+</div>
+
+@*  }*@

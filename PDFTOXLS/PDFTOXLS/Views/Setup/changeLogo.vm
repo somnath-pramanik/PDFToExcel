@@ -1,0 +1,264 @@
+#if($Flash.delete)
+<section class="grid_12"><div class="alert succes_msg"><strong>Succes: </strong>$Flash.delete</div></section>
+#end
+<section id="container" class="container_12">
+				<!-- ======= .grid_12 - block begin ======= -->
+				<section class="grid_12">
+					<div class="box">
+						<div class="inside nobg">
+                        <table border="0" width="100%" cellpadding="0" cellspacing="0" class="setup-holder">
+                              <tr>
+                                 <td align="left" valign="middle" class="details-header"><b>Choose Theme</b></td>
+                              </tr>
+							  <tr>
+                                 <td align="left" valign="top" class="inside">
+                                 <table border="0" width="100%" cellpadding="0" cellspacing="0" class="inside-table-holder">
+                                 <tr>
+                                 <td width="20%" class="leftnavcollapse">
+                                 #parse("LeftPanel/Leftpanel.vm")
+                                 </td>
+                                 <td  width="80%" class="rightcontentcollaspe">
+                                 <div class="arrow-right" id="table-collapse"></div>
+								 		<table border="0" width="100%" cellpadding="0" cellspacing="0" class="mass-transfer">
+                              
+							  <tr>
+                                 <td >
+
+
+
+
+
+<div id="tabs">
+<ul>
+<li><a href="#tabs-1">Upload Logo</a></li>
+<li><a href="#tabs-2">Choose Logo</a></li>
+<li><a href="#tabs-3">Choose theme</a></li>
+</ul>
+<div id="tabs-1">
+<div class="tabs-content-div">
+     
+        <form id="define">
+                                             $Form.HiddenField("profileuser.Id")
+                                  
+                                        <table border="0" width="100%" cellpadding="0" cellspacing="0" class="mass-transfer">
+                                        <tr>
+                                        <td style="width:320px;"><b>Logo Size: (228X42) </b>
+                                            <input type="file" name="FileLogo" id="FileLogo" /></td>
+                                        <td><input type="submit" name="btnUpload" onclick="javascript:AjaxFileUpload('$Url.For("%{controller='CreateLayout',action='uploadFile'}")');" value="Upload" class="add-button" /></td>
+                                        </tr>
+                                        <tr>
+                                        <td colspan="2">&nbsp;</td>
+                                        </tr>
+                                        </table>
+                                        </form>
+      </div>
+</div>
+<div id="tabs-2">
+<div class="tabs-content-div">
+        <!--<h2 class="title">Choose Logo</h2>-->
+        <div class="themeholder">
+        #set($k=0)
+        #foreach($Logo in $Logos)
+        <div class="singletheme" #if($k%2== 0) class="odd" #else class="even"  #end>
+                                        <div class="themeimage"><img src="$siteRoot/Content/images/$!Logo.ImgPath" alt="Logo" class="logo" /></div>
+                                       <div class="bottomthemlogo">
+                                        <div class="themeinfo">$!Logo.Name</div>
+                                        <div class="themestatus">
+                                        #if($activeLogo.Id==$!Logo.Id)
+                                           &nbsp;   Active
+                                             #else
+                                              <a href="javascript:OnlyLoadPage('$Url.For("%{controller='CreateLayout',action='changeStyle',querystring='id=$!Logo.Id'}")')">
+                                           &nbsp;  Click To Active
+                                          </a>
+                                          #end
+                                        </div>
+                                        <div class="themestatus">
+                                        #if($Logo.Id!=$defaultLogo.Id)
+                                             <a href="javascript:OnlyLoadPage('$Url.For("%{controller='CreateLayout',action='deleteLogo',querystring='id=$Logo.Id'}")')">
+                                             Delete
+                                             </a>
+                                             #end
+                                        </div>
+                                        </div>
+                                        </div>
+                                        #set($k=$k+1)
+                                          #end
+                                          <div class="clear"></div>
+                                        </div>
+        
+      </div>
+</div>
+<div id="tabs-3">
+<div class="tabs-content-div">
+        <!--<h2 class="title">Choose theme</h2>-->
+        <div class="themeholder">
+            
+            #foreach($Logo in $logoThemes)
+                                    <div class="singletheme">
+                                        <div class="themeimage"><img src="$siteRoot/Content/images/$!Logo.snapImage" alt="Aqua theme" /></div>
+                                       <div class="$!Logo.bottomtheme">
+                                        <div class="themeinfo">$!Logo.Theme</div>
+                                        <div class="themestatus">
+                                        #if($!Logo.StylePath==$StylePath)
+                                           &nbsp;   Active
+                                             #else
+                                              <a  onclick="javascript:OnlyLoadPage('$Url.For("%{controller='CreateLayout',action='changeStyle',querystring='sname=$!Logo.sname&id=$!Logo.Id'}")');" href="#CreateLayout=changeLogo">
+                                           &nbsp;  Click to Active
+                                          </a>
+                                          #end
+                                        </div>
+                                        </div>
+                                        </div>
+
+            #end
+
+                                        <!--<div class="singletheme">
+                                        <div class="themeimage"><img src="$siteRoot/Content/images/theme-green.jpg" alt="Aqua theme" /></div>
+                                       <div class="bottomtheme-green">
+                                        <div class="themeinfo">Green</div>
+                                        <div class="themestatus">
+                                        #if($StylePath=='css')
+                                           &nbsp;   Active
+                                             #else
+                                              <a  onclick="javascript:OnlyLoadPage('$Url.For("%{controller='CreateLayout',action='changeStyle',querystring='sname=originalstyle1&id=$Logo.Id'}")');" href="#CreateLayout=changeLogo">
+                                           &nbsp;  Click to Active
+                                          </a>
+                                          #end
+                                        </div>
+                                        </div>
+                                        </div>
+                                        <div class="singletheme">
+                                        <div class="themeimage"><img src="$siteRoot/Content/images/theme-black.jpg" alt="Aqua theme" /></div>
+                                       <div class="bottomtheme-black">
+                                        <div class="themeinfo">Black</div>
+                                        <div class="themestatus">
+                                        #if($StylePath=='css-black')
+                                             &nbsp; Active
+                                             #else
+                                              <a  onclick="javascript:OnlyLoadPage('$Url.For("%{controller='CreateLayout',action='changeStyle',querystring='sname=blackstyle2&id=$Logo.Id'}")');" href="#CreateLayout=changeLogo">
+                                          &nbsp;Click to Active
+                                          </a>
+                                          #end
+                                        </div>
+                                        </div>
+                                        </div>
+                                        <div class="singletheme">
+                                        <div class="themeimage"><img src="$siteRoot/Content/images/theme-b.jpg" alt="Aqua theme" /></div>
+                                       <div class="bottomtheme-blue">
+                                        <div class="themeinfo">Blue</div>
+                                        <div class="themestatus">
+                                        #if($StylePath=='css-blue')
+                                             &nbsp; Active
+                                             #else
+                                              <a  onclick="javascript:OnlyLoadPage('$Url.For("%{controller='CreateLayout',action='changeStyle',querystring='sname=bluestyle3&id=$Logo.Id'}")');" href="#CreateLayout=changeLogo">
+                                          &nbsp;Click to Active
+                                          </a>
+                                          #end
+                                        </div>
+                                        </div>
+                                        </div>
+                                        <div class="singletheme">
+                                        <div class="themeimage"><img src="$siteRoot/Content/images/theme-c.jpg" alt="Aqua theme" /></div>
+                                       <div class="bottomtheme-caramel">
+                                        <div class="themeinfo">Caramel</div>
+                                        <div class="themestatus">
+                                        #if($StylePath=='css-yellow')
+                                             &nbsp; Active
+                                             #else
+                                              <a onclick="javascript:OnlyLoadPage('$Url.For("%{controller='CreateLayout',action='changeStyle',querystring='sname=yellowstyle4&id=$Logo.Id'}")');"  href="#CreateLayout=changeLogo">
+                                          &nbsp;Click to Active
+                                          </a>
+                                          #end
+                                        </div>
+                                        </div>
+                                        </div>
+                                        <div class="singletheme">
+                                        <div class="themeimage"><img src="$siteRoot/Content/images/theme-g.jpg" alt="Aqua theme" /></div>
+                                       <div class="bottomtheme-gray">
+                                        <div class="themeinfo">Gray</div>
+                                        <div class="themestatus">
+                                        #if($StylePath=='css-grey')
+                                             &nbsp; Active
+                                             #else
+                                              <a onclick="javascript:OnlyLoadPage('$Url.For("%{controller='CreateLayout',action='changeStyle',querystring='sname=greystyle5&id=$Logo.Id'}")');" href="#CreateLayout=changeLogo">
+                                          &nbsp;Click to Active
+                                          </a>
+                                          #end
+                                        </div>
+                                        </div>
+                                        </div>-->
+                                        <div class="clear"></div>
+                                        </div>
+                                </div>
+</div>
+</div>
+
+
+								 </td>
+                              </tr>
+                            </table>
+								 </td>
+                                 </tr>
+                                 </table>
+                            </td>
+                            </tr>
+                            </table>
+						<div class="clear"></div>
+						</div>
+					</div>
+				</section>
+
+
+
+
+ <script type="text/javascript">
+     jQuery(function () {
+         jQuery("#tabs").tabs();
+     });
+</script>
+
+
+
+
+
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+        jQuery("#leftaccordion > li > div").click(function () {
+
+            if (false == jQuery(this).next().is(':visible')) {
+                jQuery('#leftaccordion ul').slideUp(300);
+            }
+            jQuery(this).next().slideToggle(300);
+        });
+
+        jQuery('#leftaccordion ul:eq(1)').show();
+        jQuery("#table-collapse").click(function () {
+            jQuery(".leftnavcollapse").toggle();
+            if (jQuery(this).hasClass("arrow-right") == true) {
+                jQuery(this).removeClass("arrow-right");
+                jQuery(this).addClass("arrow-left");
+            } else {
+                jQuery(this).removeClass("arrow-left");
+                jQuery(this).addClass("arrow-right");
+            }
+
+        });
+        //ar a = jQuery(".singletheme").size();
+        jQuery('.singletheme').hover(function () {
+            jQuery(this).find('img').animate({ opacity: ".6" }, 300);
+            jQuery(this).find('.bottomtheme-black, .bottomtheme-green, .bottomtheme-blue, .bottomtheme-caramel, .bottomtheme-gray').animate({ bottom: "-1px" }, 300);
+            jQuery(this).find('.bottomthemlogo').animate({ bottom: "-1px" }, 300);
+            jQuery(this).find('.bottomthlogo').animate({ bottom: "-1px" }, 300);
+        }, function () {
+            jQuery(this).find('img').animate({ opacity: "1.0" }, 300);
+            jQuery(this).find('.bottomtheme-black, .bottomtheme-green, .bottomtheme-blue, .bottomtheme-caramel, .bottomtheme-gray').animate({ bottom: "-36px" }, 100);
+            jQuery(this).find('.bottomthemlogo').animate({ bottom: "-70px" }, 100);
+            jQuery(this).find('.bottomthlogo').animate({ bottom: "-57px" }, 100);
+        });
+    });	
+</script>
+
+
+
+
+</section>

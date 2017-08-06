@@ -1,0 +1,55 @@
+﻿@model PDFTOXLS.Models.MyLayout
+
+    <div class="row table-row">
+        <div class="col-sm-9 col-md-9 col-xs-12">
+            
+  <div class="col-xs-12 clearfix">
+      <div class="paddingboth topbtmpadding clearfix">
+          <h2 class="font-md">New layout</h2>
+<form  method="post" action="/Setup/SaveCreateLayout"  id="validate-form" style="margin-bottom: 0px !important;">
+      @Html.HiddenFor(m => m.ID, new { @Value = @ViewBag.Id })
+   @*  @Html.HiddenFor(m => m.is_clnt, new { @Value =true })
+     @Html.HiddenFor(m=>m.TASK_NO, new { @class="form-control" })*@
+
+     <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6">
+    <div class="form-group">
+    <label >Layout Name <span class="required">*</span>:</label>
+  
+      @Html.TextBoxFor(m=>m.ProfileName, new { @class="form-control input-sm" })
+      <div>@Html.ValidationMessageFor(model => model.ProfileName)</div>
+   
+  </div>
+  </div>
+   <div class="col-xs-12 col-sm-6 col-md-6">
+    <div class="form-group">
+    <label>Description</label>
+    
+    
+      @Html.TextBoxFor(m=>m.Description, new { @class="form-control input-sm" })
+      <div>@Html.ValidationMessageFor(model => model.Description)</div>
+    
+     </div>
+  </div>
+    </div>
+
+   
+        <input type="submit" class="btn btn-xs btn-primary" name="btnSubmit" value="Submit" />
+
+   @*  <a class="btn btn-primary" href="@Url.Action("List", "Group")">Back</a>
+    *@
+
+
+ </form>
+          </div>
+      </div>
+        </div>
+        <div class="col-sm-3 col-md-3 col-xs-12 custom borderleft">
+           <div class="sidebar topbtmpadding">
+          This is inside a relative positioned z-index: 1 div
+          </div>
+
+        </div>
+    </div>
+
+

@@ -1,0 +1,203 @@
+<div class="row">
+    <div class="col-sm-12 col-md-12 col-xs-12">   
+    <div class="col-xs-12 clearfix">
+    <div class="clearfix">
+    <h2 class="font-md paddingboth10">Settings</h2>
+    <hr class="style-one" /> 
+    <div class="clearfix">
+           
+        <ul class="ticket-setting">
+            @if (@ViewBag.CurrentUser.rolemaster != null && @ViewBag.CurrentUser.rolemaster.IsCreateUser)
+                    {
+             <li>
+                 <a href="#List-User" onclick="javascript:OnlyLoadPage('@Url.Action("List", "User")');" >
+            <div class="ticket-setting-hover">
+            <div class="full-circle-md object-center">
+            <div class="center-image"><i class="fa fa-user font34"></i></div>
+            </div>
+            <div class="blackfont text-center"><p class="font15 darkblack"> User</p></div>
+            </div>
+                 </a>
+            </li>
+            }
+           @*  <li><a href="@Url.Action("DefineGroup", "Group")">
+            <div class="ticket-setting-hover">
+            <div class="full-circle-md object-center">
+            <div class="center-image"><i class="fa fa-users font34"></i></div>
+            </div>
+            <div class="blackfont text-center"><p class="font15 darkblack">New User Group</p></div>
+            </div>
+                 </a>
+            </li>*@
+             @if (@ViewBag.CurrentUser.rolemaster != null && @ViewBag.CurrentUser.rolemaster.IsCreateCustomer)
+                    {
+             <li><a href="#List-Client" onclick="javascript:OnlyLoadPage('@Url.Action("List", "Client")');">
+            <div class="ticket-setting-hover">
+            <div class="full-circle-md object-center">
+            <div class="center-image"><i class="fa fa-user font34"></i></div>
+            </div>
+            <div class="blackfont text-center"><p class="font15 darkblack">Customer</p></div>
+            </div>
+                 </a>
+            </li>
+             }
+          @*   <li><a href="@Url.Action("DefineGroupClientMap", "Client")">
+            <div class="ticket-setting-hover">
+            <div class="full-circle-md object-center">
+            <div class="center-image"><i class="fa fa-link font34"></i></div>
+            </div>
+            <div class="blackfont text-center"><p class="font15 darkblack">Group Client Mapping</p></div>
+            </div>
+                </a>
+            </li>*@
+             @if (@ViewBag.CurrentUser.rolemaster != null && @ViewBag.CurrentUser.rolemaster.IsUserClientMapping)
+                    {
+            <li><a href="#DefineTeamClientMap-Client" onclick="javascript:OnlyLoadPage('@Url.Action("DefineTeamClientMap", "Client")');">
+            <div class="ticket-setting-hover">
+            <div class="full-circle-md object-center">
+            <div class="center-image"><i class="fa fa-link font34"></i></div>
+            </div>
+            <div class="blackfont text-center"><p class="font15 darkblack">Team Wise Customer Mapping</p></div>
+            </div>
+                </a>
+            </li>
+             }
+             @if (@ViewBag.CurrentUser.rolemaster != null && @ViewBag.CurrentUser.rolemaster.IsClientUserMapping)
+                    {
+             <li><a href="#DefineClientTeamMap-Client" onclick="javascript:OnlyLoadPage('@Url.Action("DefineClientTeamMap", "Client")');" >
+            <div class="ticket-setting-hover">
+            <div class="full-circle-md object-center">
+            <div class="center-image"><i class="fa fa-link font34"></i></div>
+            </div>
+            <div class="blackfont text-center"><p class="font15 darkblack">Customer Wise Team Mapping</p></div>
+            </div>
+                </a>
+            </li>
+             }
+              @if (@ViewBag.xx=="No" && @ViewBag.CurrentUser.rolemaster != null && @ViewBag.CurrentUser.rolemaster.IsShowLayOut)
+                    {
+             <li><a href="#LayoutDefine-Setup" onclick="javascript:OnlyLoadPage('@Url.Action("LayoutDefine", "Setup")');" >
+            <div class="ticket-setting-hover">
+            <div class="full-circle-md object-center">
+            <div class="center-image"><i class="fa fa-picture-o font34"></i></div>
+            </div>
+            <div class="blackfont text-center"><p class="font15 darkblack">LayOut Design</p></div>
+            </div>
+                </a>
+            </li>
+              }
+             @if (@ViewBag.xx == "No" && @ViewBag.CurrentUser.rolemaster != null && @ViewBag.CurrentUser.rolemaster.IsFieldAccess)
+                    {
+            <li><a href="#MasterField-Setup" onclick="javascript:OnlyLoadPage('@Url.Action("MasterField", "Setup")');" >
+            <div class="ticket-setting-hover">
+            <div class="full-circle-md object-center">
+            <div class="center-image"><i class="fa fa-picture-o font34"></i></div>
+            </div>
+            <div class="blackfont text-center"><p class="font15 darkblack">User Field Access</p></div>
+            </div>
+                </a>
+            </li>
+             }
+             @if (@ViewBag.CurrentUser.rolemaster != null && @ViewBag.CurrentUser.rolemaster.IsUserAccess)
+                    {
+            <li><a href="#RoleList-Setup" onclick="javascript:OnlyLoadPage('@Url.Action("RoleList", "Setup")');" >
+            <div class="ticket-setting-hover">
+            <div class="full-circle-md object-center">
+            <div class="center-image"><i class="fa fa-picture-o font34"></i></div>
+            </div>
+            <div class="blackfont text-center"><p class="font15 darkblack">User Access</p></div>
+            </div>
+                </a>
+            </li>
+             }
+
+
+            @if (@ViewBag.CurrentUser.rolemaster != null && @ViewBag.CurrentUser.rolemaster.IsTeam)
+              {
+            <li><a href="#DefineTeamUserMap-Client" onclick="javascript:OnlyLoadPage('@Url.Action("DefineTeamUserMap", "Client")');" >
+            <div class="ticket-setting-hover">
+            <div class="full-circle-md object-center">
+            <div class="center-image"><i class="fa fa-picture-o font34"></i></div>
+            </div>
+            <div class="blackfont text-center"><p class="font15 darkblack">Team</p></div>
+            </div>
+                </a>
+            </li>
+            }
+             
+              @if (@ViewBag.CurrentUser.rolemaster != null && @ViewBag.CurrentUser.rolemaster.IsSlaPolicy)
+              {
+
+              <li><a href="#SlaPolicyList-SlaPolicy" onclick="javascript:OnlyLoadPage('@Url.Action("SlaPolicyList", "SlaPolicy")');" >
+            <div class="ticket-setting-hover">
+            <div class="full-circle-md object-center">
+            <div class="center-image"><i class="fa fa-picture-o font34"></i></div>
+            </div>
+            <div class="blackfont text-center"><p class="font15 darkblack">SLA Policy</p></div>
+            </div>
+                </a>
+            </li>
+                }
+            @if (@ViewBag.CurrentUser.rolemaster != null && @ViewBag.CurrentUser.rolemaster.IsBusinessCalendar)
+              {
+                   <li><a href="#List-BusinessCalendar" onclick="javascript:OnlyLoadPage('@Url.Action("List", "BusinessCalendar")');" >
+            <div class="ticket-setting-hover">
+            <div class="full-circle-md object-center">
+            <div class="center-image"><i class="fa fa-picture-o font34"></i></div>
+            </div>
+            <div class="blackfont text-center"><p class="font15 darkblack">Business Calender</p></div>
+            </div>
+                </a>
+            </li>
+            }
+             @if (@ViewBag.CurrentUser.rolemaster != null && @ViewBag.CurrentUser.rolemaster.IsTeamUserModule)
+              {
+              <li><a href="#DefineTeamUserModuleMap-Client" onclick="javascript:OnlyLoadPage('@Url.Action("DefineTeamUserModuleMap", "Client")');" >
+            <div class="ticket-setting-hover">
+            <div class="full-circle-md object-center">
+            <div class="center-image"><i class="fa fa-picture-o font34"></i></div>
+            </div>
+            <div class="blackfont text-center"><p class="font15 darkblack">Team User Module</p></div>
+            </div>
+                </a>
+            </li>
+             }
+
+             @if (@ViewBag.CurrentUser.IsGlobalAccess)
+            {
+             
+             <li><a href="#List-Setup" onclick="javascript:OnlyLoadPage('@Url.Action("List", "News")');" >
+            <div class="ticket-setting-hover">
+            <div class="full-circle-md object-center">
+            <div class="center-image"><i class="fa fa-picture-o font34"></i></div>
+            </div>
+            <div class="blackfont text-center"><p class="font15 darkblack">News & Announcement</p></div>
+            </div>
+                </a>
+            </li>
+             }
+
+              @if (@ViewBag.CurrentUser.IsGlobalAccess)
+            {
+             
+             <li><a href="#List-Setup" onclick="javascript:OnlyLoadPage('@Url.Action("RenewProduct", "AMCDetails")');" >
+            <div class="ticket-setting-hover">
+            <div class="full-circle-md object-center">
+            <div class="center-image"><i class="fa fa-picture-o font34"></i></div>
+            </div>
+            <div class="blackfont text-center"><p class="font15 darkblack">AMC Details</p></div>
+            </div>
+                </a>
+            </li>
+             }
+
+        </ul>
+
+    </div>
+
+    </div>
+
+    
+    </div>
+    </div>
+    </div>

@@ -1,0 +1,113 @@
+﻿@model PDFTOXLS.Models.Ex_user_new
+@{
+   Layout = "~/Views/Shared/_LayoutModal.cshtml";
+  
+}
+
+<div id="ShowForgotpwd">
+<div class="LR-box-wrapper">	
+			<div class="LR-box">
+				<div class="LR-box-container LR-clearfix">
+
+                    <script type="text/JavaScript">
+                        function reset_all() {
+                            PASS.SetText("");
+                            E_MAIL.SetText("");
+                        }
+                        jQuery(document).ready(function () {
+                            var h = jQuery(window).height();
+                            jQuery('.backend_login').height(h);
+                        });
+                   </script>
+
+
+                    <form action="/Home/Index" method="post" class="form-horizontal"  id="validate-form" style="margin-bottom: 0px !important;">
+					<div class="LR-box-inner">
+						<input type="hidden" id="timezoneoffset" name="timezoneoffset" value="" />
+						<div class="LR-site-logo"><img src="~/images/PDFTOXLS-desk-login.jpg" alt="PDFTOXLS Software" /></div><!-- .site-logo -->
+						<div class="LR-sign-up">
+							
+							<div class="LR-site-description">Covert Pdf To Excels.
+							</div><!-- .site-description -->
+							<span class="LR-sign-up-label"></span>
+							<div class="LR-sign-up-container LR-extra-fields">
+								<div class="LR-sign-up-container-inner LR-clearfix">
+                                    
+                                    <div class="LR-clearfix LR-sign-up-input signup-email">
+                                         @* @Html.Label("Email")*@
+                                       
+                                         @Html.TextBoxFor(m=>m.E_MAIL)
+                                        </div>
+            
+                                    <div class="LR-clearfix LR-sign-up-input signup-email">
+									
+                                              @* @Html.Label("Password")*@
+                                     @Html.PasswordFor(m=>m.PASS)
+                                    </div>
+            <div class="clearfix">
+<div style="display:table;float:left;margin-right:5px;"><input type="checkbox" name="rememberme" /> Remember Me <br />
+   
+<a href="#" onclick="getEmailID();">Forgot password</a>
+
+</div>
+									<button type="submit" class="LR-sign-up-submit">Login</button>
+</div>
+									<div id="showmsg" style="text-align:center; color:#f00; font-weight:normal; text-shadow:none !important;" >@ViewBag.Message</div>
+                                    
+                                    
+
+                                            @if (ViewBag.Message !="")
+                                            {
+                                          <script type="text/javascript">
+                                              jQuery(document).ready(function () {
+                                                  jQuery("#showmsg").delay(3000).fadeOut("slow");
+                                                  //jQuery("#showmsg").fadeOut().delay(800);
+
+                                              });
+
+                                          </script>
+                                            }
+								</div><!-- .sign-up-container-inner -->
+							</div><!-- .sign-up-container -->
+						</div><!-- .sign-up -->			
+					</div><!-- .box-inner -->
+					</form>
+				</div><!-- .box-container -->
+			</div><!-- .box -->
+		</div>
+    </div>
+<script>
+    function pad(number, length) {
+        var str = "" + number;
+        while (str.length < length) {
+            str = '0' + str;
+        }
+        return str;
+    }
+    $(document).ready(function () {
+        var offset = new Date().getTimezoneOffset();
+
+        offset = ((offset < 0 ? '+' : '-') + pad(parseInt(Math.abs(offset / 60)), 2) + ":" + pad(Math.abs(offset % 60), 2));
+        $("#timezoneoffset").val(offset);
+    });
+
+</script>
+<script type="text/javascript">
+
+    function getEmailID() {
+        $.ajax({
+            type: "POST",
+            url: "/Home/ForgotPassword",
+            data: { email: jQuery("#E_MAIL").val() },
+            datatype: "html",
+            success: function (data) {
+                //alert(data);
+                $('#ShowForgotpwd').html('');
+                $('#ShowForgotpwd').html(data);
+
+            }
+        });
+
+    }
+
+</script>

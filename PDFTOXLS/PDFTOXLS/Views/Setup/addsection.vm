@@ -1,0 +1,94 @@
+#if($Flash.delete)
+<section class="grid_12"><div class="alert succes_msg"><strong>Succes: </strong>$Flash.delete</div></section>
+#end
+<section id="container" class="container_12">
+				<!-- ======= .grid_12 - block begin ======= -->
+				<section class="grid_12">
+					<div class="box">
+						<div class="inside nobg">
+							<table border="0" width="100%" cellpadding="0" cellspacing="0" class="setup-holder">
+                              <tr>
+                                 <td align="left" valign="middle" class="details-header"><b>Create Custom Field</b> </td>
+                              </tr>
+							  <tr>
+                                 <td align="left" valign="top" class="inside">
+                                 <table border="0" width="100%" cellpadding="0" cellspacing="0" class="inside-table-holder">
+                                 <tr>
+                                 <td width="20%" class="leftnavcollapse">
+                                 #parse("LeftPanel/Leftpanel.vm")
+                                 </td>
+                                 <td  width="80%" class="rightcontentcollaspe">
+                                 <div class="arrow-right" id="table-collapse"></div>
+       $Form.FormTag("%{id='define' , class=''}")
+       $Form.HiddenField("ModuleSection.Id")
+  <div class="inner-modal-body">
+
+    <div class="sectioncontainer">
+
+      <div class="whitewrapper">                  
+        <table width="100%" cellpadding="0" cellspacing="0" border="0" class="profileheader">
+                                           
+            <tr>                                           
+            <tr>
+            <td class="bldtxt" align="right">Module:</td>
+            <td class="nrltext" align="left">
+            $FormHelper.Select("ModuleSection.module.Id", $Allselectmodule, "%{value='id', text='LCaption',  class=''}")
+            </td>
+            </tr>                                                                                                                                                   
+            <tr>
+            <td class="bldtxt" align="right">Section Name*:</td>
+            <td class="nrltext" align="left">
+                <input type="hidden" name="fieldtype" id="fieldtype" value="0" />
+                    $FormHelper.TextField("ModuleSection.Name","%{size='30',  class='required' }") 
+                <!-- <input type="text" name="addfieldname" id="addfieldname" style="width:240px;" class="required" value="$!FieldName" />-->
+            </td>
+            </tr>
+                <tr>
+                  <td class="bldtxt nobg" align="right">&nbsp;</td>
+                   <input type="hidden" name="ModuleName" value="$!ModuleName" />
+                   <input type="hidden" name="EditMod" value="$!EditMod" />
+                  <td class="nrltext" align="left">
+                  <input type="button" class="add-button margin9 saveallbtn" name="SaveButtonType" onclick="javascript:SaveEditAjax('$Url.For("%{controller='CreateLayout',action='saveManageModuleSection'}")');"  value="Save" />
+                  <input type="button" class="add-button margin9 cancelallbtn" name="SaveButtonType" onclick="javascript:OnlyLoadPage('$Url.For("%{controller='CreateLayout',action='Define'}")');"  value="Cancel" />
+                 </td>
+
+                </tr>
+        </table>
+
+         </div>         
+    </div>
+  </div>
+    </form>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<div class="clear"></div>
+</div>
+</div>
+</section>
+<script type="text/javascript">
+jQuery(document).ready(function () {
+      
+        jQuery("#leftaccordion > li > div").click(function () {
+            if (false == jQuery(this).next().is(':visible')) {
+                jQuery('#leftaccordion ul').slideUp(300);
+            }
+            jQuery(this).next().slideToggle(300);
+        });
+        jQuery('#leftaccordion ul:eq(1)').show();
+        jQuery("#table-collapse").click(function () {
+            jQuery(".leftnavcollapse").toggle();
+            if (jQuery(this).hasClass("arrow-right") == true) {
+                jQuery(this).removeClass("arrow-right");
+                jQuery(this).addClass("arrow-left");
+            } else {
+                jQuery(this).removeClass("arrow-left");
+                jQuery(this).addClass("arrow-right");
+            }
+        });
+    });	
+    </script>
+</section>

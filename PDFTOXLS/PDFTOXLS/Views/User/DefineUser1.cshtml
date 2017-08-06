@@ -1,0 +1,196 @@
+﻿@model MvcApplication1.Models.Ex_user_new
+<div class="row">
+    <div class="col-sm-12 col-md-12 col-xs-12">
+        <div class="col-xs-12 clearfix">
+            <div class="paddingboth topbtmpadding clearfix">
+                <h2 class="font-md">Create User</h2>
+                @using (Html.BeginForm("Save","User","POST")) {
+                @Html.ValidationSummary(true)
+                <fieldset>
+                     @Html.HiddenFor(m => m.USR_ID, new { @Value = @ViewBag.USR_ID })
+                    @if (ViewBag.mode == "Edit")
+                    {
+                        @Html.HiddenFor(m => m.PASS, new { @Value = @ViewBag.PASS })
+                        @Html.HiddenFor(m => m.REPASSWORD, new { @Value = @ViewBag.REPASSWORD })
+                    }
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                <label>Email Address <span class="required">*</span>:</label>
+                                @Html.TextBoxFor(m => m.E_MAIL, new { @class = "form-control input-sm" })
+                                @Html.ValidationMessageFor(model => model.E_MAIL)
+                            </div>
+                        </div>
+                    </div>
+
+                     <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                <label>First Name <span class="required">*</span>:</label>
+                                @Html.TextBoxFor(m => m.USER_FNAME, new { @class = "form-control input-sm" })
+                                <div>@Html.ValidationMessageFor(model => model.USER_FNAME)</div>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                <label>Last Name <span class="required">*</span>:</label>
+                                @Html.TextBoxFor(m => m.USER_LNAME, new { @class = "form-control input-sm" })
+                                <div>@Html.ValidationMessageFor(model => model.USER_LNAME)</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    @if (ViewBag.mode != "Edit")
+                    {
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <label>Password  <span class="required">*</span>:</label>
+                                    @Html.PasswordFor(m => m.PASS, new { @class = "form-control input-sm" })
+                                    <div>@Html.ValidationMessageFor(model => model.PASS)</div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <label>Retype <span class="required">*</span>:</label>
+                                    @Html.PasswordFor(m => m.REPASSWORD, new { @class = "form-control input-sm" })
+                                    <div>@Html.ValidationMessageFor(model => model.REPASSWORD)</div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                <label>Office Phone Number <span class="required">*</span>:</label>
+
+                                @Html.TextBoxFor(m => m.OF_PH_EXT, new { @class = "form-control input-sm" })
+                                <div>@Html.ValidationMessageFor(model => model.OF_PH_EXT)</div>
+
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                <label>Mobile Number <span class="required">*</span>:</label>
+
+                                @Html.TextBoxFor(m => m.HM_PH_EXT, new { @class = "form-control input-sm" })
+                                <div>@Html.ValidationMessageFor(model => model.HM_PH_EXT)</div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                <label>User Access :</label>
+                                @Html.DropDownList("RoleMasterId", (IEnumerable<SelectListItem>)ViewBag.role,"select One", new { @class = "form-control input-sm" })
+                                @Html.ValidationMessageFor(model => model.RoleMasterId)
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-6">
+                             <div class="form-group">
+                                <label>Personalize welcome message :</label>
+                                @Html.TextAreaFor(m => m.WELCOM_MSG, new { rows = 3, @class = "form-control input-sm" })
+                             </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="form-group">
+                            <div class="form-inline">
+                                <div class="checkbox">
+                                    <label>                 
+                                        @Html.CheckBoxFor(model => model.IsInternalOrExternal) Internal User
+                                        @Html.ValidationMessageFor(model => model.IsInternalOrExternal)
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group" style="display:none;">
+                            <div class="form-inline">
+                                <div class="checkbox">
+                                    <label>
+                                         @Html.CheckBoxFor(model => model.IsAdministration) Administrator
+                                         @Html.ValidationMessageFor(model => model.IsAdministration)
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                     <div class="row">
+                        <div class="form-group">
+                            <div class="form-inline">
+                                <div class="checkbox">
+                                    <label> 
+                                        @Html.RadioButtonFor(model =>model.TicketAccess,"GlobalAccess",true)                 
+                                      Global Access
+                                      
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-inline">
+                                <div class="checkbox">
+                                    <label>
+                                         @Html.RadioButtonFor(model =>model.TicketAccess,"TeamAccess",true)  
+                                      @*  <input type="radio" name="TicketAccess" value="TeamAccess" />*@ Team Access
+                                       
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                           <div class="form-group">
+                            <div class="form-inline">
+                                <div class="checkbox">
+                                    <label>
+                                         @Html.RadioButtonFor(model =>model.TicketAccess,"SelfAccess",true)  
+                                      @*  <input type="radio" name="TicketAccess" value="SelfAccess" />*@ Self Access
+                                        @Html.ValidationMessageFor(model =>model.TicketAccess)
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                      <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                <label>Team <span class="required">*</span>:</label>
+                                 @Html.DropDownList("selectedTeam", (IEnumerable<SelectListItem>)ViewBag.TeamList,  "--Select One--", new { @class="chosen-select form-control input-sm",multiple = "multiple", data_placeholder = "Choose a Emailaddress...", style = "width:750px;", tabindex = "4" })
+                                  @Html.ValidationMessageFor(model =>model.selectedTeam)
+                                 @*<select name="selectedTeam" data-placeholder="Select Team" id="addteam"  multiple tabindex="6">
+                                     <option value="1">dfddsf</option>
+                                       <option value="2">dfddsf</option>
+                                       <option value="3">dfddsf</option>
+                                 
+                                 </select>*@
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                    <input type="submit" class="btn btn-xs btn-primary" name="btnSubmit" value="Update" />
+                    <a class="btn btn-xs btn-default" href="@Url.Action("List", "User")">Cancel</a>
+                </fieldset>
+            }
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(function () {
+        $(".chosen-select").chosen({ display_selected_options: false });
+        $(".chosen-select").on('chosen:showing_dropdown', function(evt, params) {
+            $('#showbtns').fadeIn(300);
+    });
+
+</script>
+

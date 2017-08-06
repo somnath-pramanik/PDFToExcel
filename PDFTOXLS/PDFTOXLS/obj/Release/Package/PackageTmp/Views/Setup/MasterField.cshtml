@@ -1,0 +1,192 @@
+﻿<div class="row">
+
+    <div class="col-sm-12 col-md-12 col-xs-12">
+
+        <div class="col-xs-12 clearfix">
+            <div class="topbtmpadding clearfix">
+                <div class="clearfix">
+                    <h2 class="font-md  pull-left">Master Fields</h2>
+                  @*  <a class="btn btn-xs btn-primary pull-right" href="@Url.Action("CreateLayout", "Setup")">Create layout</a>*@
+                </div>
+                <div class="col-xs-12">
+                    <p>
+                        Customize the page layout by changing the order of the columns and fields, marking fields as mandatory, adding or removing the fields and sections.
+                        You can drag and drop the section header to reorder the sections. You need to drag and drop the fields to move them to the List of Removed Fields.
+                    </p>
+                </div>
+
+                <form method="post" action="/Setup/updateMasterFieldApps" id="validate-form" style="margin-bottom: 0px !important;">
+                    <div class="col-xs-6">
+
+                        <div class="form-group">
+                            <label>Choose Module:</label>
+
+                            <select name="moduleList" id="moduleList" class="form-control input-sm" onchange="getMyMasterFieldList();">
+                               @* <option value=" ">Select One</option>*@
+                                <option value="DEF_TICKET">Ticket</option>
+
+                                <!--<option  value="MyLead">My Call</option>-->
+                            </select>
+                        </div>
+                         <div class="form-group">
+                            <label>Choose User Access:</label>
+                             @*<select name="RoleId" id="RoleId" class="form-control input-sm" onchange="getMyMasterFieldList();">
+                                <option value=" ">Select One</option>
+                                <option value="1">Role 1</option>
+
+                                <!--<option  value="MyLead">My Call</option>-->
+                            </select>*@
+                           @Html.DropDownList("RoleId", (IEnumerable<SelectListItem>)ViewBag.allRoles,  "--Select One--", new { @class="form-control input-sm" ,@onchange = "getMyMasterFieldList();" })
+                        </div>
+                    </div>
+                    <div class="col-xs-12 paddingtop15">
+                        <div id="ChangeMod">
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <input type="submit" class="btn btn-xs btn-primary" onclick="javascript: updateClientVisible();" name="btnSubmit" value="Update" />
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+</form>
+
+    <script type="text/javascript">
+
+        //function EditField(mfid,mobj)
+        //{
+        //    new Ajax.Request('$UrlHelper.For("%{controller='CreateLayout',action='editfield'}")',
+        //{
+        //    method: 'post',
+        //    parameters: { MFID : mfid, MOBJ : mobj},  
+        //    onSuccess: AjaxResultx,
+        //    onFailure: AjaxMessage
+        //});
+        //}
+        function getMyMasterFieldList() {
+            
+            $.ajax({
+                type: "POST",
+                url: "/Setup/getMyMasterFieldList",
+                data: { moduleList: jQuery("#moduleList").val(), RoleId: jQuery("#RoleId").val() },
+                datatype: "html",
+                success: function (data) {
+                    //alert(data);
+                    $('#ChangeMod').html('');
+                    $('#ChangeMod').html(data);
+
+                }
+            });
+
+
+
+        }
+
+        jQuery(document).ready(function () {
+         //   getMyMasterFieldList();
+           // updateClientVisible();
+        });
+    </script>
+
+
+<script type="text/javascript">
+    function RemoveFromList() {
+        var chks = document.getElementsByName("isremoveFromList[]");
+        var pChks = new Array();
+        for (i = 0, j = 0; i < chks.length; i++) {
+            //alert(chks[i].checked);
+            pChks[j++] = chks[i].checked;
+        }
+        document.getElementById("isremovedFromList").value = pChks;
+
+    }
+
+    function updateIsQuickLead() {
+        var chks = document.getElementsByName("isQuickLead[]");
+        var pChks = new Array();
+        for (i = 0, j = 0; i < chks.length; i++) {
+            //alert(chks[i].checked);
+            pChks[j++] = chks[i].checked;
+
+        }
+        document.getElementById("isquickleadfld").value = pChks;
+    }
+
+
+    function updateClientVisible() {
+
+        var chks = document.getElementsByName("isClientVisible[]");
+        var pChks = new Array();
+        for (i = 0, j = 0; i < chks.length; i++) {
+           
+            pChks[j++] = chks[i].checked;
+        }
+        document.getElementById("isClientVisible").value = pChks;
+    }
+
+    function updateAdminVisible() {
+
+        var chks = document.getElementsByName("isAdminVisible[]");
+        var pChks = new Array();
+        for (i = 0, j = 0; i < chks.length; i++) {
+            //alert(chks[i].checked);
+            pChks[j++] = chks[i].checked;
+        }
+        document.getElementById("isAdminVisible").value = pChks;
+    }
+
+    function updateManagerVisible() {
+
+        var chks = document.getElementsByName("isManagerVisible[]");
+        var pChks = new Array();
+        for (i = 0, j = 0; i < chks.length; i++) {
+            //alert(chks[i].checked);
+            pChks[j++] = chks[i].checked;
+        }
+        document.getElementById("isManagerVisible").value = pChks;
+    }
+    function updateMemberVisible() {
+
+     var chks = document.getElementsByName("isMemberVisible[]");
+        var pChks = new Array();
+        for (i = 0, j = 0; i < chks.length; i++) {
+            //alert(chks[i].checked);
+            pChks[j++] = chks[i].checked;
+        }
+        document.getElementById("isMemberVisible").value = pChks;
+    }
+    function updateFieldApps() {
+        var chks = document.getElementsByName("Isremovale[]");
+        var pChks = new Array();
+        for (i = 0, j = 0; i < chks.length; i++) {
+            //alert(chks[i].checked);
+            pChks[j++] = chks[i].checked;
+        }
+        document.getElementById("rmvfld").value = pChks;
+        //             var srNo = document.getElementsByName("txt_srno[]");
+        //            var psrNo = new Array();
+        //            for(i=0,j=0; i<srNo.length; i++)    {
+        //                    psrNo[j++] = srNo[i].value;
+        //             
+        //            }
+        //            new Ajax.Request('$UrlHelper.For("%{controller='CreateLayout',action='updateFieldApps'}")',
+        //                {
+        //                    method: 'get',
+        //                    parameters: { chkApp: pChks,FieldIdarr:pfldid ,SR_no:psrNo},
+        //                      onSuccess: showDelResult,
+        //                      onFailure: showDelMessage
+        //                 });
+    }
+
+    function showDelResult(transport) {
+        document.getElementById('showme').style.display = 'block';
+        alert("Successfully Updated");
+    }
+    function showDelMessage(transport) {
+        alert("Error !!");
+        //alert(transport.responseText);
+    }
+</script>
+
+

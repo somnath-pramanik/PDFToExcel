@@ -1,0 +1,222 @@
+@{
+    var grid = Html.DevExpress().GridView(settings =>
+    {
+        settings.Name = "SLA policy List";
+        settings.CallbackRouteValues = new { Controller = "SlaPolicy", Action = "SLADetailsPartial" };
+
+        settings.SettingsEditing.AddNewRowRouteValues = new { Controller = "SlaPolicy", Action = "AddTicket" };
+        settings.SettingsEditing.UpdateRowRouteValues = new { Controller = "SlaPolicy", Action = "ClientDetailsPartialUpdate" };
+        settings.SettingsEditing.DeleteRowRouteValues = new { Controller = "SlaPolicy", Action = "ClientDetailsPartialDelete" };
+        settings.SettingsEditing.Mode = GridViewEditingMode.EditFormAndDisplayRow;
+        settings.SettingsBehavior.ConfirmDelete = true;
+        settings.SettingsBehavior.ColumnResizeMode = DevExpress.Web.ASPxClasses.ColumnResizeMode.Control;
+        settings.CommandColumn.Visible = false;
+        settings.CommandColumn.ShowNewButton = false;
+        settings.CommandColumn.ShowDeleteButton = false;
+        settings.CommandColumn.ShowEditButton = false;
+        settings.Settings.ShowHeaderFilterButton = true;
+        settings.Settings.HorizontalScrollBarMode = ScrollBarMode.Auto;
+        settings.Settings.VerticalScrollBarMode = ScrollBarMode.Auto;
+        settings.Settings.VerticalScrollableHeight = 320;
+        settings.Settings.HorizontalScrollBarMode = ScrollBarMode.Visible;
+        settings.Settings.VerticalScrollBarMode = ScrollBarMode.Visible;
+      
+        //settings.Settings.VerticalScrollableHeight = 440;
+        //settings.Settings.VerticalScrollBarMode = ScrollBarMode.Auto;
+        //settings.Settings.VerticalScrollableHeight = ScrollBarMode.Auto;
+       // settings.Styles.Row.Cursor = "pointer";
+        settings.Width = System.Web.UI.WebControls.Unit.Percentage(100);
+        
+        settings.KeyFieldName = "Id";
+        settings.Columns.Add(column =>
+        {
+            column.Caption = "Action";
+            column.Width = System.Web.UI.WebControls.Unit.Percentage(20);
+            column.SetDataItemTemplateContent(c =>
+            {
+                ViewContext.Writer.Write(
+
+                    Html.ActionLink("Edit", "ModifySLA", new { Id = DataBinder.Eval(c.DataItem, "Id") }) + "&nbsp;" +
+                    Html.ActionLink("Delete", "DeleteSLA", new { Id = DataBinder.Eval(c.DataItem, "Id") },
+                   
+                        new { onclick = "return confirm('Do you really want to delete this record?')" })
+                );
+            });
+           
+            column.Settings.AllowDragDrop = DefaultBoolean.False;
+            column.Settings.AllowSort = DefaultBoolean.False;
+           // column.Width = 30;
+        });
+    
+
+     
+        
+     
+        settings.Columns.Add(column =>
+        {
+            column.FieldName = "Name";
+            column.Caption = "Name";
+            column.Settings.HeaderFilterMode = HeaderFilterMode.CheckedList;
+            column.Width = System.Web.UI.WebControls.Unit.Percentage(60);
+        });
+        //settings.Columns.Add(column =>
+        //{
+        //    column.FieldName = "ADDRESS1";
+        //    column.Caption = "Address";
+        //    column.Settings.HeaderFilterMode = HeaderFilterMode.CheckedList;
+        //});
+        settings.Columns.Add(column =>
+        {
+            column.FieldName = "PolicyDescription";
+            column.Caption = "Policy Description ";
+            column.Settings.HeaderFilterMode = HeaderFilterMode.CheckedList;
+            column.Width = System.Web.UI.WebControls.Unit.Percentage(60);
+        });
+
+        //settings.Columns.Add(c =>
+        //{
+        //    c.Caption = "Respond With (Low)";
+        //    c.SetDataItemTemplateContent(t =>
+        //    {
+        //        Html.DevExpress().Label(
+        //            l =>
+        //            {
+        //                l.Text = String.Format("{0} {1}", DataBinder.Eval(t.DataItem, "LRespond"), DataBinder.Eval(t.DataItem, "LRespondTime"));
+        //            }).Render();
+        //    });
+        //});
+        //settings.Columns.Add(c =>
+        //{
+        //    c.Caption = "Resolve With In(Low)";
+        //    c.SetDataItemTemplateContent(t =>
+        //    {
+        //        Html.DevExpress().Label(
+        //            l =>
+        //            {
+        //                l.Text = String.Format("{0} {1}", DataBinder.Eval(t.DataItem, "LResolve"), DataBinder.Eval(t.DataItem, "LResolveTime"));
+        //            }).Render();
+        //    });
+        //});
+        //settings.Columns.Add(c =>
+        //{
+        //    c.Caption = "Respond With In(Normal)";
+        //    c.SetDataItemTemplateContent(t =>
+        //    {
+        //        Html.DevExpress().Label(
+        //            l =>
+        //            {
+        //                l.Text = String.Format("{0} {1}", DataBinder.Eval(t.DataItem, "NRespond"), DataBinder.Eval(t.DataItem, "NRespondTime"));
+        //            }).Render();
+        //    });
+        //});
+        //settings.Columns.Add(c =>
+        //{
+        //    c.Caption = "Resolve With In(Normal)";
+        //    c.SetDataItemTemplateContent(t =>
+        //    {
+        //        Html.DevExpress().Label(
+        //            l =>
+        //            {
+        //                l.Text = String.Format("{0} {1}", DataBinder.Eval(t.DataItem, "NResolve"), DataBinder.Eval(t.DataItem, "NResolveTime"));
+        //            }).Render();
+        //    });
+        //});
+        //settings.Columns.Add(c =>
+        //{
+        //    c.Caption = "Respond With In(High)";
+        //    c.SetDataItemTemplateContent(t =>
+        //    {
+        //        Html.DevExpress().Label(
+        //            l =>
+        //            {
+        //                l.Text = String.Format("{0} {1}", DataBinder.Eval(t.DataItem, "HRespond"), DataBinder.Eval(t.DataItem, "HRespondTime"));
+        //            }).Render();
+        //    });
+        //});
+        //settings.Columns.Add(c =>
+        //{
+        //    c.Caption = "Resolve With In(High)";
+        //    c.SetDataItemTemplateContent(t =>
+        //    {
+        //        Html.DevExpress().Label(
+        //            l =>
+        //            {
+        //                l.Text = String.Format("{0} {1}", DataBinder.Eval(t.DataItem, "HResolve"), DataBinder.Eval(t.DataItem, "HResolveTime"));
+        //            }).Render();
+        //    });
+        //});
+        //settings.Columns.Add(c =>
+        //{
+        //    c.Caption = "Respond With In(Urgent)";
+        //    c.SetDataItemTemplateContent(t =>
+        //    {
+        //        Html.DevExpress().Label(
+        //            l =>
+        //            {
+        //                l.Text = String.Format("{0} {1}", DataBinder.Eval(t.DataItem, "URespond"), DataBinder.Eval(t.DataItem, "URespondTime"));
+        //            }).Render();
+        //    });
+        //});
+
+        settings.Columns.Add(column =>
+        {
+            column.FieldName = "LEscalationEmail";
+            column.Caption = " Email(Low)";
+            column.ColumnType = MVCxGridViewColumnType.CheckBox;
+            var CheckBoxProperties = column.PropertiesEdit as CheckBoxProperties;
+            // CheckBoxProperties.ValueType = typeof(bool);
+            column.Settings.HeaderFilterMode = HeaderFilterMode.CheckedList;
+            column.Width = System.Web.UI.WebControls.Unit.Percentage(30);
+        });
+        settings.Columns.Add(column =>
+        {
+            column.FieldName = "NEscalationEmail";
+            column.Caption = "Email(Normal)";
+            column.ColumnType = MVCxGridViewColumnType.CheckBox;
+            var CheckBoxProperties = column.PropertiesEdit as CheckBoxProperties;
+            // CheckBoxProperties.ValueType = typeof(bool);
+            column.Settings.HeaderFilterMode = HeaderFilterMode.CheckedList;
+            column.Width = System.Web.UI.WebControls.Unit.Percentage(30);
+        });
+        settings.Columns.Add(column =>
+        {
+            column.FieldName = "HEscalationEmail";
+            column.Caption = " Email(High)";
+            column.ColumnType = MVCxGridViewColumnType.CheckBox;
+            var CheckBoxProperties = column.PropertiesEdit as CheckBoxProperties;
+            // CheckBoxProperties.ValueType = typeof(bool);
+            column.Settings.HeaderFilterMode = HeaderFilterMode.CheckedList;
+            column.Width = System.Web.UI.WebControls.Unit.Percentage(30);
+        });
+        settings.Columns.Add(column =>
+        {
+            column.FieldName = "UEscalationEmail";
+            column.Caption = " Email(Urgent)";
+            column.ColumnType = MVCxGridViewColumnType.CheckBox;
+            var CheckBoxProperties = column.PropertiesEdit as CheckBoxProperties;
+            // CheckBoxProperties.ValueType = typeof(bool);
+            column.Settings.HeaderFilterMode = HeaderFilterMode.CheckedList;
+            column.Width = System.Web.UI.WebControls.Unit.Percentage(30);
+        });
+      
+                
+        settings.SettingsPager.FirstPageButton.Visible = true;
+        settings.SettingsPager.LastPageButton.Visible = true;
+        settings.SettingsPager.PageSizeItemSettings.Visible = true;
+        settings.SettingsPager.PageSizeItemSettings.Items = new string[] { "30", "50", "100" };
+        settings.SettingsPager.PageSize = 30;
+
+        settings.SettingsPager.Visible = true;
+        settings.Settings.ShowGroupPanel = true;
+        settings.Settings.ShowFilterRow = true;
+        settings.SettingsBehavior.AllowSelectByRowClick = true;
+
+    });
+    if (ViewData["EditError"] != null)
+    {
+        grid.SetEditErrorText((string)ViewData["EditError"]);
+        
+        
+    }
+}
+@grid.Bind(Model).GetHtml()
